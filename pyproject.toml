@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "audio-alpha"
+version = "0.1.0"
+description = "Earnings-call audio feature pipeline."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "pandas",
+    "numpy",
+    "librosa",
+    "soundfile",
+    "scikit-learn",
+    "tqdm",
+]
+
+[project.optional-dependencies]
+standard = ["opensmile"]
+test = ["pytest"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
