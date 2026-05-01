@@ -1,0 +1,209 @@
+COMPANY  : Meta (META)
+TITLE    : /earnings/call-transcripts/2026/04/23/ardagh-metal-packaging-ambp-q1-2026-transcript/
+URL      : https://www.fool.com/earnings/call-transcripts/2026/04/23/ardagh-metal-packaging-ambp-q1-2026-transcript/
+SCRAPED  : 2026-04-24 23:15:12
+──────────────────────────────────────────────────────────────────────
+
+Image source: The Motley Fool.
+DATE
+Thursday, April 23, 2026 at 8 a.m. ET
+CALL PARTICIPANTS
+Chief Executive Officer — Oliver Graham
+Chief Financial Officer — Stefan Schellinger
+Investor Relations — Stephen Lyons
+TAKEAWAYS
+Adjusted EBITDA
+-- $179 million, up 15% year over year, surpassing guidance of $160 million to $170 million, mainly due to European segment strength.
+Global Beverage Can Volumes
+-- Declined by 1%, consistent with management expectations, reflecting the impact of contract resets in North America and a 6% growth comp in the prior year.
+Europe Revenue
+-- Increased 18% to $625 million, or 6% in constant currency, primarily due to mix benefits and input cost pass-through, with shipments down 1% from prior year.
+Europe Adjusted EBITDA
+-- Rose 53% to $75 million, with a 36% increase in constant currency, helped by favorable hedging and volume/mix, partially offset by higher costs.
+Americas Revenue
+-- Grew 19% to $879 million, driven by higher input costs passed to customers and volume mix effects.
+Americas Adjusted EBITDA
+-- Decreased by 2% to $104 million, citing higher operational and overhead costs and lower input cost recovery, partially offset by volume/mix improvements.
+Brazil Beverage Shipments
+-- Rose 14%, outpacing the market's modest overall volume decline due to customer mix; March trailed a strong January-February start.
+North America Shipments
+-- Declined 5%, impacted by contract resets, weather disruptions, and supply chain challenges, compared with a strong 8% prior-year figure.
+Legal Award
+-- Jury verdict awarded approximately $175 million to
+Ardagh Metal Packaging S.A.
+(
+AMBP
++1.78%
+)
+in the Boston Beer litigation, subject to potential appeal and post-trial motions; payment timing uncertain.
+Liquidity
+-- Ended the quarter at $488 million, with no near-term bond maturities and a debt currency mix aligned with earnings.
+Net Leverage
+-- Stood at 5.7x net debt to LTM adjusted EBITDA, up from 5.5x due to December preferred share refinancing; excluding this, leverage slightly declined year over year.
+Asset-Based Lending Facility
+-- Refinanced and increased to $450 million with extended maturity to January 2031.
+Free Cash Flow Components (2026)
+-- CapEx of $200 million, cash interest of $220 million, lease principal repayments of $115 million, cash tax of $30 million, and a small working capital outflow.
+Dividend
+-- Declared an unchanged quarterly ordinary dividend of $0.10 per share.
+Energy Hedging Coverage
+-- Over 85% covered for 2026, over 75% for 2027, and more than 60% for 2028, limiting direct exposure to energy price volatility.
+Adjusted EBITDA Guidance
+-- Management reaffirmed full-year guidance of $750 million to $775 million and Q2 guidance of $210 million to $220 million versus $212 million prior-year constant currency.
+Capacity Expansion
+-- Plans to increase European capacity within existing Spanish and UK facilities over the coming years, supported by favorable market demand.
+Americas Market Growth Outlook
+-- Expects industry volumes to grow at low single-digit percent, with Ardagh Metal Packaging S.A. projecting a small volume decline for the year followed by growth in 2027 in line with the industry.
+Brazil Market Growth Outlook
+-- Anticipates industry growth in the low to mid single-digit percent range for the year, with company shipments aimed to generally track the market.
+Input Cost Pressures
+-- Moderate increases in certain direct materials foreseen in the second half, notably in coatings, but not impacting full-year EBITDA guidance.
+Freight Hedging Benefit
+-- A mid single-digit millions positive impact to European EBITDA in the quarter from freight cost-hedge revaluation, regarded by management as potentially temporary.
+Need a quote from a Motley Fool analyst? Email
+[email protected]
+RISKS
+North American operational costs were elevated due to aluminum supply chain disruptions and adverse weather, which management states "drove higher operational costs" and resulted in a 5% shipment decline.
+Legal proceedings in the Boston Beer case may delay realization of the $175 million award; management said, "they have the option to appeal. That could mean a delay in realization."
+Management indicated a cautious stance on input cost inflation and consumer pressure in the second half, stating, "There is a little bit of input cost inflation we expect in the second half. I think we have to accept that the consumer is facing into a lot of inflation at the minute, so we cannot be absolutely sure."
+SUMMARY
+The quarterly results reflected robust European segment profit expansion, while North American volume and margin were pressured by contract resets and operational headwinds. Management highlighted that energy cost exposure remains mitigated through long-term hedging, with incremental cost increases expected in coatings, but these were not deemed material enough to alter 2026 earnings guidance. The asset-based lending facility was upsized and extended, supporting liquidity and capital structure stability. In Brazil, outperformance was attributed to customer mix despite a softer industry quarter, and ongoing investments in European capacity were reconfirmed to address constrained supply for higher-growth categories.
+Scanner data cited by management pointed to ongoing market share gains by beverage cans versus competing packaging substrates across key markets.
+Hedging efficacy and input cost recovery drove European upside, with management identifying "input cost recovery" and production mix as the largest contributors to EBITDA outperformance.
+Despite weather and supply shocks in North America, management confirmed guidance was unchanged given recent market normalization in metal availability.
+Dividend continuity was maintained irrespective of legal uncertainties or operational volatility, reinforcing stated capital return priorities.
+INDUSTRY GLOSSARY
+Midwest Premium
+: The surcharge over the London Metal Exchange (LME) base price for aluminum delivered to the U.S. Midwest, reflecting logistical and local supply dynamics.
+IFRS 15 contract asset
+: A receivable or asset recorded under International Financial Reporting Standards when revenue is recognized ahead of invoicing due to specific contract terms; here, linked to volume and mix effects.
+Full Conference Call Transcript
+Oliver Graham:
+Thanks, Stephen. We are pleased to report strong first quarter results for Ardagh Metal Packaging S.A., with adjusted EBITDA growth of 15% versus the prior year, significantly ahead of our guidance and demonstrating the resilience of our business. Beverage can sales declined by 1% versus the prior year quarter, in line with our expectations as we cycled strong prior year growth of 6% and due to the impact of contract resets in North America. Our adjusted EBITDA outperformance in the quarter was driven by Europe, which benefited from strong input cost recovery, including a favorable timing impact from the revaluation of freight cost-related hedging, as well as favorable volume mix effects.
+Performance in the Americas was broadly in line with expectations. Brazil delivered strong results, driven by above-market volume growth, which was offset by the impact of a more challenging operating environment in North America where adverse weather conditions and aluminum supply chain disruptions drove higher operational costs. While the supply chain situation is improving, we do expect to see further impact into Q2. The conflicts in the Middle East did not have any material impact on our Q1 performance. Ardagh Metal Packaging S.A. has no manufacturing operations in the Middle East and no significant direct supply chain exposure. We continue to monitor the geopolitical environment and the associated volatility in input costs, in particular energy, freight, and certain direct materials.
+Ardagh Metal Packaging S.A.’s exposure to the recent increase in energy prices is small, given our hedge positions for 2026 and beyond. However, we do anticipate some moderate input cost increases in the second half as a result of the impact of the Middle East conflict on certain direct materials. Now looking at Ardagh Metal Packaging S.A.’s Q1 results by segment. In Europe, first quarter revenue increased by 18% to $625 million, or by 6% on a constant currency basis compared with the same period in 2025. This was due to favorable volume mix effects, including the impact of the IFRS 15 contract asset, and the pass-through of higher input costs, including higher aluminum prices.
+Shipments declined by 1% for the quarter, which reflected the ramp-up of new contracts and the cycling of a strong prior year comparable of 5%. We experienced good growth in carbonated soft drinks, in the energy category, and across our diverse range of smaller growing categories. Through this strong underlying growth in non-alcoholic categories, as well as our commercial actions and network enhancements, our portfolio saw a favorable mix shift in the period and good growth in specialty can volumes. First quarter adjusted EBITDA in Europe increased by 53% versus the prior year to $75 million, strongly ahead of expectations.
+On a constant currency basis, adjusted EBITDA increased by 36%, principally due to higher input cost recovery and favorable volume mix, including the impact of the IFRS 15 contract asset, partly offset by higher operational and overhead costs. Our input costs recovery in the quarter benefited from a favorable timing impact from the revaluation of freight cost-related hedging. Regarding our direct energy exposure, Ardagh Metal Packaging S.A. is well covered for its energy needs in 2026 and beyond. For 2026, we are over 85% covered for our energy requirements, for 2027 over 75%, and we are more than 60% covered for 2028. In 2026, in terms of volume growth, we reaffirm our expectation of around 3% in Europe.
+Capacity remains tight in the region, and we are therefore optimizing our network to better serve higher-demand can sizes in faster-growing categories. In our last update, we highlighted our intention to add additional capacity within existing facilities in the attractive markets of Spain and the UK on a measured basis over the coming years. We continue to progress these plans, which are underpinned by our favorable market positions and our confidence in Europe’s growth outlook. In the first two months of the year, beverage packaging scanner data across our markets continued to show share gains for the beverage can versus other packaging substrates.
+In the Americas, revenue in the first quarter increased by 19% to $879 million, principally reflecting the pass-through of higher input costs to customers, including the impact of the higher Midwest premium, and favorable volume mix effects. Americas adjusted EBITDA for the quarter was broadly in line with expectations with a 2% decrease versus the prior year to $104 million, primarily driven by higher operations and overhead costs and lower input cost recovery, partly offset by favorable volume mix effects. A strong performance in Brazil, driven by 14% shipments growth and increased fixed cost absorption, was offset by a more challenging operating environment in North America. In North America, shipments decreased by 5% for the quarter.
+This reflected lower volumes after expected contract resets, the impact on operations from supply chain challenges, and the cycling of a strong prior year of 8%. Supply chain challenges in the period included the impact of disruptions to metal supply and adverse weather at the beginning of the year. Underlying demand dynamics in the industry remain robust with strong industry scanner data year to date, with the exception of the beer category to which Ardagh Metal Packaging S.A. has only a low single-digit exposure. In particular, the energy category continues to record strong growth supported by broader distribution and further innovation.
+Ardagh Metal Packaging S.A. continued to enjoy good growth in the energy category in the quarter, reflecting our broad positioning across the category. Looking into 2026, we continue to expect industry growth of a low single-digit percent. As previously indicated, we expect some softness for Ardagh Metal Packaging S.A. following contract resets. We anticipate 2026 being a transition year with a small volume decline and with a more favorable second half volume versus the first half. We expect to return to growth in 2027 at least in line with the industry on the back of additional contracted filling locations and our attractive portfolio.
+Of note in North America was that on April 6, 2026, a court entered a jury verdict, pending any post-trial motions, in connection with the lawsuit filed against Boston Beer in 2022 for breach of contract in respect to minimum volume purchase requirements, and the jury awarded damages of approximately $175 million to Ardagh Metal Packaging S.A. plus prejudgment interest, if assessed. In Brazil, first quarter beverage shipments increased by 14%, which represented a strong improvement versus the fourth quarter and was also ahead of the industry due to our customer mix.
+Industry data indicates that following a strong start to the year in January and February, March activity was softer and resulted in an overall modest decline in volumes in the first quarter. Looking into the remainder of 2026, we continue to expect industry growth of a low to mid single-digit percentage and for Ardagh Metal Packaging S.A.’s volumes to broadly track the market. I will hand over now to Stefan to talk you through our financial position for the quarter before finishing with some concluding remarks.
+Stefan Schellinger:
+Thank you, Ollie, and good morning, good afternoon, everyone. We ended the quarter with a robust liquidity position of $488 million, in line with expectations. We note that in addition to our strong liquidity position, we have no near-term bond maturities and the currency mix of our debt broadly matches the currency mix of our earnings. During the quarter, Ardagh Metal Packaging S.A. completed the refinancing of the asset-based lending facility, which was upsized to $450 million and with its maturity date extended to January 2031.
+Net leverage of 5.7x net debt over the last twelve months adjusted EBITDA compares with 5.5x in the prior year quarter, with an increase reflecting the impact of the refinancing of the preferred shares in December. Excluding this impact, the underlying net leverage metrics slightly declined year over year. In terms of 2026, we approximately expect the following for the various components of free cash flow: total CapEx of $200 million including growth investments, cash interest of $220 million, lease principal repayments of approximately $115 million. Lease payments were higher in the first quarter versus the prior year, which reflected the buyout of an existing lease in North America.
+Cash tax of approximately $30 million, and a small outflow in working capital. Finally, today we have announced our unchanged quarterly ordinary dividend of $0.10 per share. And with that, I will hand it back to Ollie.
+Oliver Graham:
+Thanks, Stefan. So just before questions, I will recap on Ardagh Metal Packaging S.A.’s performance and key messages. Firstly, adjusted EBITDA of $179 million in the first quarter exceeded our guidance range of $160 million to $170 million, driven by a strong performance in Europe. Global volumes declined by 1%, in line with our expectations, reflecting the impact of a strong prior year comparable of 6% and the impact of contract resets in North America. Thirdly, Ardagh Metal Packaging S.A. has no manufacturing in the Middle East and no significant direct supply exposure. Ardagh Metal Packaging S.A.’s energy cost position is protected through a strongly hedged position in 2026 and beyond.
+For 2026, we reaffirm our adjusted EBITDA to be in the range of $750 million to $775 million. Adjusted EBITDA growth is expected to be driven by operational efficiencies and cost savings, volume growth, and improved category volumes, ahead of an expected return to growth at least in line with the industry in 2027. In terms of guidance for the second quarter, adjusted EBITDA is expected to be in the range of $210 million to $220 million versus the prior year quarter of $212 million on a constant currency basis.
+Operator:
+Please stand by.
+Oliver Graham:
+Hi. I think we lost connection on the main line, so we are just opening the call up to questions now.
+Operator:
+If you have dialed in via the telephone and would like to ask a question, please signal by pressing star 1 on your telephone keypad. If you are using a speakerphone, please make sure to mute your line so that your signal can reach our equipment. Again, press star 1 to ask a question. Our first question comes from Matthew Roberts with Raymond James.
+Matthew Roberts:
+Hey, Ollie, Stefan, Stephen, good morning. Thank you for taking the questions. In the prepared remarks, you noted modest cost increases in the second half. Can you give any additional color on what specific categories those are in? Is it more pronounced in a certain region, or what is not covered and passed through, or has a lag in recovery, whether that is energy, coatings? Any additional detail there?
+Oliver Graham:
+Sure. Yes, that is mostly in our coatings area. As I said in the remarks, we are very well covered on the energy side. There are some parts and provisions in coating contracts in-year that will potentially come through in the second half if oil prices stay very elevated. But they obviously have not changed our guidance range, so that gives you a sense of the scale.
+Matthew Roberts:
+Right, appreciate that, and did note that you did reaffirm the guide. When you came in a little bit better than you were expecting, it sounds like volumes broadly are similar as well. Has anything changed on the volume outlook by region? Or based on the 1Q beat, would that imply the cost headwinds are around, like, $15 million? Could you ballpark that if possible? Thanks again for taking the questions.
+Oliver Graham:
+Sure, Matt. Look, it is just Q1; there is plenty of the year to go. That is one reason to remain a little bit cautious given the state of the world. There is a little bit of input cost inflation we expect in the second half. I think we have to accept that the consumer is facing into a lot of inflation at the minute, so we cannot be absolutely sure. We did not see a reason to change our volume guide when we looked at the Q1 market data that we could see. In our numbers, we saw a lot of strength in that data. In Europe, particularly, we have data for January and February in our key markets.
+There are some real double-digit growth rates in some of those markets, particularly soft drinks categories. Brazil obviously had a very strong January and February, coming off a very strong November-December, in other words, a very strong summer. We are going into the winter season; we do have the World Cup, which should be favorable. In North America, again, the volume numbers are still extremely strong across soft drinks categories, particularly energy, especially going into the Easter period with strong promo activity. So although it is appropriate to be cautious at this stage of the year, we definitely saw no reason to really change the volume numbers on a concrete basis.
+We are just being cautious around possible input cost inflation in H2 and recognizing that the consumer may be under some pressure during the year.
+Operator:
+If you find that your question has been answered, you may remove yourself from the queue by pressing star 2. We will take our next question from George Staphos with Bank of America.
+George Staphos:
+Thanks very much. Good morning, Ollie, Stefan, Stephen. Thanks for the details, and congratulations on the progress so far this year. I will ask three questions in sequence and return to the queue just for time. First, can you talk about what the impact was on the timing effect on the hedge revaluation in Europe? How large of a factor was that? Is there any residual into the rest of the year? Secondly, you touched on it a little bit, can you talk about what World Cup and, to some degree, Americas 250 is meaning for volume relative to what a normal summer might look like?
+And then third point, Brazil: can you talk a little bit about how things softened there in the market, what is causing that, and any outlook that you can take into, obviously, now the weaker winter months and the implications for the rest of the year? Thank you, guys, and good luck in the quarter.
+Oliver Graham:
+Sure. Thanks, George. On the first one, I think it was mid single-digit millions of benefit in the quarter from the European freight hedging position, coming from, obviously, we are careful around hedging some of the positions that are on us. There is some possibility of some of that reversing depending on what happens to commodity costs in the year, so some of that is potentially a timing impact, which is why we are not overrating it in our forward guidance. That is the sort of order of magnitude.
+I think the World Cup and maybe Brazil questions get a bit intertwined because where it has the potential to be most impactful is in Brazil given that it is falling in the winter period, given the sponsorship of the Brazilian national team and the focus on the World Cup, and assuming they go deep into the tournament. That is why we would be hopeful that this slightly negative start to the year on the full quarter after a very good January and February would be moderated into Q2 and Q3. We would also be hopeful, after the summer we had and that we just came through, that next summer would also be a good summer.
+We think some of the macro elements are stabilizing. We have also got some elections. We do see in the data that we continue to have the can take share from returnable, and we know that is a long-term trend that will continue. Obviously, the major brewer down there controls some of that dynamic, and they have their own pressures that drive it sometimes quarter to quarter, but if you look at the long-term trend, it is certainly still well in place. So I would not overread too much into the Q1 numbers in Brazil. We still hold to what we said—low to mid single-digit for the year—and for us to be in line with that.
+And then World Cup outside of Brazil, certainly Europe, we saw a tick-up towards the end of the quarter in terms of label activity and graphics activity. We are definitely seeing a lot of promotional-type cans or individual-type cans coming into the mix, the inventory builds, and that would suggest World Cup, and I think we are seeing elsewhere in the market that there could be some positive effects. I am always cautious to call it too early; we need to see it sell through. It is often very weather related in terms of how exactly it plays through. But all positive signs at the moment, I think, in both Europe and Brazil.
+George Staphos:
+Just one quick one—just a yes or no, and I will turn it over. On aluminum, you mentioned you are seeing supply constraints in North America, at least that is what I took away. Despite the constraints, do you feel you are positioned well enough to be able to meet your commitments over the rest of the year?
+Oliver Graham:
+Yes. Good question. It does seem like the situation is moderating quite quickly now as we have gone into April. I think a lot of metal is coming into the market from overseas that obviously was on long supply chains, and we do see that landing now and helping to improve the situation. We also have the first new mill ramping up now. We have the second new mill coming at the end of the year. So we are hopeful now that we are through the worst.
+The Middle East conflict did not help—some supply out of the Middle East obviously got restricted in March—but as we see the trends now, sitting towards April and going into May, we are hopeful that is all moderating, and we certainly do not see any need to change our guidance or change our forecast off the back of it.
+Operator:
+Once again, if you would like to ask a question, please signal by pressing star 1. We will take our next question from Anthony Pettinari with Citi.
+Anthony Pettinari:
+Good morning. Just following up on volumes and the Middle East conflict. It sounds like you have not seen any impact and obviously do not have any assets in the region. But I am just wondering—you talked about strong scanner data in January, February. As you look at March, April, have you seen any change in order patterns in terms of people pre-buying or maybe easing off? Or as you talk to customers or channel partners, is there a sense that there could be an impact if this continues to go on, or maybe it is better or worse in North America versus Europe? Any color you could give would be helpful.
+Oliver Graham:
+I do not want to mislead in the January, February comments. That is just where we actually have data because we are still in April, so not all the March data and the full quarter data have come through. Our impression actually is that Europe strengthened in March. We have seen some very encouraging scanner data for January and February, particularly Germany—very strong again on the soft drink side—so my prediction would be that March scanner data for Europe will be good. Everything we are seeing in our lines was good in March and continues into April in a good way. So definitely not seeing a negative in Europe. In North America, we saw really good volumes going into Easter.
+We saw that in our business, particularly in certain categories. So certainly nothing to suggest that there is any change at this point. There clearly was something going on in Brazil in that January and February were stronger than March, and as you go into the winter season, it can always be a little bit volatile depending on how people build inventory into the summer and what they were left with, and obviously we are into the slower season.
+One of the reasons we have held guidance and our volume forecast, despite the situation in the world, is it demonstrates the resilience of the beverage can sector, the way our customers are using beverage cans in their mix and prioritizing the beverage can, and also the resilience of our own business. So a very positive outlook from our point of view to hold guidance in this current geopolitical environment.
+Anthony Pettinari:
+Great, that is very helpful. Maybe just one follow-up on Europe. It seems like results really exceeded your expectations. Is the biggest surprise there from your perspective on the volume side in CSD or energy drinks, or is it the cost recovery? If you think about the bridge versus your initial expectations, what was the biggest driver of the outperformance?
+Oliver Graham:
+The biggest driver was clearly the input cost recovery. We mentioned the timing effect and the one-offs around freight. But also, we did see the mix benefit in the quarter; that was strong. We got some good specialty can growth because of the categories we are in, and that also played into the IFRS 15 contract asset because we had very strong production and good specialty volumes. Both of those played into the contract asset and volume mix.
+So just a really good performance by the region: delivered against our expectations, ramped up our new specialty volumes, we made a change to one of our plants to improve our specialty footprint and that ramped up extremely well, so production was a bit ahead, and then very good delivery on all elements of cost.
+Anthony Pettinari:
+Got it, that is very helpful. I will turn it over.
+Stephen Lyons:
+Thanks, Anthony.
+Operator:
+Our next question comes from Anoja Shah with UBS.
+Anoja Shah:
+Hi, good morning everyone. I just had a question on this Boston Beer verdict. What steps are left in order for you to get that $175 million? Is it a definite, but it is just a matter of time? What legal steps are left and when might you actually receive this, and will it have any impact on your capital allocation priorities? Thanks.
+Oliver Graham:
+We are not going to talk in much detail about it because there are still clearly legal proceedings, but they have the option to appeal. That could mean a delay in realization. We do not see that changing our capital allocation priorities at this point. We have laid out the next investments that make sense for the business, and we are very conscious of making sure we stay within our leverage position. At the minute, we do not see it changing any capital allocation policies.
+Anoja Shah:
+Okay, thanks. And on the aluminum availability issue, can you quantify what the drag was in Q1 and maybe what is in your guidance for Q2? And then do you expect it to fall away after that?
+Oliver Graham:
+We think across the weather—remember, in January and February there was some very cold weather in the South of the United States—that led to a lot of disruption. We had people struggling to get to our facilities, struggling to get to customer facilities, and freight issues on the roads. Between that and the metal, we think we lost one to two points of growth in the quarter across both ends and cans. That is the order of magnitude we saw in the quarter. At the minute, we are not predicting anything particular in the guidance for Q2; we have held roughly to where we had planned to be because, in the last couple of weeks, things have improved quite significantly.
+We would be hopeful we can come through Q2 without any significant drag, but maybe Stefan can add anything to that.
+Stefan Schellinger:
+In regards to the cost side of the impact, we had adverse impact on freight costs as well as manufacturing costs. We had to move a little bit around product in our manufacturing network and had some unfavorable freight lanes as a result. In terms of the operations, it was more from hand to mouth—shorter runs, maybe not running the right mix all the time in terms of metal. If you add that all up, it is probably a mid to high single-digit millions impact on EBITDA in the quarter.
+Operator:
+Alright. Thank you very much. I will turn it over.
+Operator:
+We will go next to Arun Viswanathan with RBC Capital Markets.
+Arun Viswanathan:
+Thanks for taking my question. Hope you guys are well. Maybe I will get your thoughts on potential inflation and what you are seeing on the tariff side as well. In North America, how has the Midwest Premium affected demand and can pricing, if at all? Do you see that changing with 2026?
+Oliver Graham:
+We keep looking for it because between the LME and the Midwest, they are pretty significant, and this has been going on for a while so people’s hedge positions may be rolling off a little bit. But we are not seeing it. We are not seeing it in the data, we are not seeing it in our customers’ mix and their plans, and we are not seeing it on the shelf. The can has got a lot of resilience at the moment: it remains a very efficient package, consumers are clearly favoring it, and that drives brand companies that rightly take note of what their consumers want. In certain parts of the world, sustainability credentials also play very strongly.
+The tariff situation has not got better—if anything in the last piece it made it marginally worse, but not significantly. All the data is a testament to the resilience of the industry and the substrate. We are also seeing inflationary impact into petrochemical and energy, which are negative for competing substrates. Net-net, although we should always be cautious with the inflation that the consumer is facing more generally, cans seem to be continuing to win in the mix.
+Arun Viswanathan:
+Thanks for that. Just to clarify, is it the case that the beverage companies, your customers, are absorbing some of that extra cost and not necessarily passing that on in higher beverage prices and so they are continuing to promote, or is it that customers are paying higher prices but they are willing to do that?
+Oliver Graham:
+There was obviously a very significant increase in pricing over the last few years post-COVID and all of the inflationary effects that happened after COVID. So I think there is room for some absorption, but, equally, we do not know all the ins and outs of our customers’ P&L, and we do not know the nature of their hedge positions and other ways they might be offsetting these costs. I do not think we are seeing a huge amount of price increase at retail. If we look at the promo information, promos are still strong. There is not a lot of room to increase price much further given the price increase over the last few years.
+Our sense is that our customers are managing it.
+Arun Viswanathan:
+Then just on that supply-demand side, given the strong growth in Europe, I am not sure if you would need to potentially add any capacity there. Similarly, in North America, strong energy growth could continue. Can you let us know your plans for capacity additions in Europe, North America, and Brazil, if any?
+Oliver Graham:
+We said it in the prepared remarks and talked about it at Q4: we do plan to add capacity in Europe. That is where we are the most tight in terms of our network and our utilization, with Spain and the UK being the two markets we will invest in. Those projects will come in the next couple of years to support the growth that we have, and it is an extremely supportive market environment. We see our peers investing behind that environment; we see our customers putting growth plans behind the can, supported by those investments. We will absolutely be participating through growth investments in Europe.
+At the moment, in North America, particularly with the contract resets that took place last year, we have space in the network. We need to make sure we get the mix right. We have made investments to increase the flexibility of the network in North America and are very well positioned for different types of growth, but we may continue to do that at the margin to ensure our network is really tuned, particularly as specialty cans grow. In Brazil, we have good capacity availability. We put a lot in the Northeast where we still need to grow into that.
+The Southeast is a bit tighter, but with improvements we are making in the network, we have space in Brazil, so nothing planned there in the short term.
+Arun Viswanathan:
+Thanks a lot.
+Oliver Graham:
+Thanks, Arun.
+Operator:
+We will move to Gabe Hajde with Wells Fargo.
+Richard Clayton Carlson:
+Good morning, guys. This is actually Richard Carlson on for Gabe this morning. First question on Europe: you have mentioned that you do not have direct exposure to the conflict in the Middle East, but surely some of your competitors do. Are you seeing any change in the marketplace from companies who are having a hard time getting the metal supply or the energy supply that they need?
+Oliver Graham:
+No, really not. What we understand is most of the impact is occurring in-region with facilities being stopped, particularly to the east of the region. Markets that are supplied with energy out of the Gulf—markets like India—are where the impact is landing, not in Europe where you have much more developed supply chains and much less direct exposure to the region. So we are not seeing any near-term impact in Europe.
+Richard Clayton Carlson:
+Right. And your plants are all natural gas, right?
+Oliver Graham:
+We operate with a mixture of gas and electricity. But yes, that is what we operate with.
+Richard Clayton Carlson:
+Got it, thank you. And then as we think about the cadence for the year, presumably you have had some good momentum going into Q2. How has your Q2 outlook changed over the past couple of months? It seems like you have a little more front-end load for the year, but has your guide from what you thought it would have been two or three months ago increased?
+Oliver Graham:
+No, I do not think so. To the extent that there are going to be different impacts from when we first issued guidance, it is mostly sitting in the second half—either a little bit of input cost inflation. In our guidance, it is caution. We were in Q1 and had not seen how this conflict plays out, the potential scale of the inflationary impacts, or the disruption. We are being cautious, but to the extent we are adjusting slightly, it is more Q3, Q4 where we are not putting through all the gains that we have made in Q1.
+I think Q2 is sitting pretty much where we already had it, and Stefan is nodding; it feels like I got that right.
+Stefan Schellinger:
+Agreed.
+Richard Clayton Carlson:
+Understood. Thanks, guys, and best of luck in the quarter.
+Operator:
+That concludes our Q&A session for today. I will turn the conference back to Oliver Graham for any additional or closing remarks.
+Oliver Graham:
+Thanks, Lisa. Thanks, everyone, on the call. To summarize, in the first quarter we reported strong adjusted EBITDA growth of 15% versus the prior year, significantly ahead of guidance and particularly driven by a strong performance in Europe. It is a testament to the resilience of the industry and of Ardagh Metal Packaging S.A. On the back of that, even in the face of the current geopolitical environment, we reaffirm our guidance for 2026 full-year adjusted EBITDA in the range of $750 million to $775 million, supported by our robust input cost pass-through mechanisms and our energy hedging arrangements. We look forward to talking to you again at our Q2 results. Thank you.
+Operator:
+This concludes today’s call. Thank you for your participation. You may now disconnect.
