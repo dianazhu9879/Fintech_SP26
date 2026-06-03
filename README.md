@@ -55,6 +55,12 @@ data/raw/audio/TSLA/*.mp3
 
 Raw audio and generated CSV/WAV outputs are ignored by git.
 
+If your source audio lives on Hugging Face, import it into the same layout:
+
+```bash
+python -m audio_alpha.import_hf_audio --dataset-id TQTfintech/40-2025-q1-q4
+```
+
 ## Pipeline
 
 Run the full MVP:
@@ -72,6 +78,12 @@ python -m audio_alpha.segment_audio
 python -m audio_alpha.extract_features
 python -m audio_alpha.score_audio_sentiment
 python -m audio_alpha.aggregate_call_features
+```
+
+For a faster single-file pass (call-level features + indices, without segment rollups):
+
+```bash
+python -m audio_alpha.build_call_feature_table
 ```
 
 Core outputs:
