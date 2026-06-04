@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AlphaSights Earnings Intelligence</title>
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="layout.css">
+  <link rel="stylesheet" href="components.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+  <div class="page">
+    <header class="topbar">
+      <div class="topbar-left">
+        <a class="logo" href="index.html">Alpha<span>Sights</span></a>
+      </div>
+      <div class="topbar-right">
+        <div class="date-label">EARNINGS INTEL</div>
+        <div class="live-badge"><span class="live-dot"></span> READY</div>
+      </div>
+    </header>
+
+    <main class="home-content">
+      <section class="home-summary" aria-label="Dashboard summary">
+        <div>
+          <div class="section-label">Earnings-event intelligence</div>
+        </div>
+        <p class="home-summary-line"><span id="statTickerCount">40</span> current earnings setups · 7 call-analysis tickers · 195 historical audit tests · latest setup pages focus on decision inputs.</p>
+      </section>
+
+      <section class="disclosure-strip">
+        <div>
+          <strong>Current ticker page:</strong> EPS/revenue/guidance surprise, fundamentals, model score, transcript tone, topics, Q&amp;A pressure, and audio features where available.
+        </div>
+        <div>
+          <strong>Historical context:</strong> prior-quarter reactions and model-audit outcomes live on the ticker pages for calibration.
+        </div>
+      </section>
+
+      <section class="filter-strip" aria-label="Sector filter">
+        <div class="filter-label">Sector filter</div>
+        <nav class="sector-tabs compact-filter" id="sectorTabs"></nav>
+      </section>
+
+      <section id="tickerList"></section>
+    </main>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>

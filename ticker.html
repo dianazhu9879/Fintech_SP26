@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AlphaSights Earnings Intelligence</title>
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="layout.css">
+  <link rel="stylesheet" href="components.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+  <div class="page">
+    <header class="topbar">
+      <div class="topbar-left">
+        <button class="back-btn" id="backBtn" type="button" aria-label="Back to ticker list">
+          <span aria-hidden="true">←</span>
+          <span>Tickers</span>
+        </button>
+      </div>
+      <div class="topbar-right">
+        <div class="date-label" id="dateLabel">EARNINGS INTEL</div>
+        <div class="live-badge"><span class="live-dot"></span> READY</div>
+      </div>
+    </header>
+    <main class="detail-main">
+      <aside class="sidebar" id="sidebar"></aside>
+      <section class="content-area" id="contentArea"></section>
+    </main>
+  </div>
+  <script src="js/data.js"></script>
+  <script src="js/ticker.js"></script>
+</body>
+</html>

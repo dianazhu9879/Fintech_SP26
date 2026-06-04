@@ -1,0 +1,139 @@
+/* ============================================
+   ALPHASIGHTS — Base Styles
+   base.css
+   ============================================ */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--color-bg-base);
+  color: var(--color-text-primary);
+  min-height: 100vh;
+  overflow-x: hidden;
+  line-height: 1.5;
+}
+
+/* ─── Scrollbar ──────────────────────────── */
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.12);
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255,255,255,0.22);
+}
+
+/* ─── Focus ──────────────────────────────── */
+:focus-visible {
+  outline: 2px solid var(--color-info);
+  outline-offset: 2px;
+}
+
+/* ─── Links ──────────────────────────────── */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ─── Buttons ────────────────────────────── */
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: var(--font-body);
+  color: inherit;
+}
+
+/* ─── Typography helpers ─────────────────── */
+.mono       { font-family: var(--font-mono); }
+.display    { font-family: var(--font-display); }
+.uppercase  { text-transform: uppercase; letter-spacing: 0.12em; }
+.label      { font-size: var(--text-2xs); text-transform: uppercase; letter-spacing: 0.14em; font-weight: 600; color: var(--color-text-muted); }
+
+/* ─── Color helpers ──────────────────────── */
+.text-bull   { color: var(--color-bull); }
+.text-bear   { color: var(--color-bear); }
+.text-warn   { color: var(--color-warn); }
+.text-info   { color: var(--color-info); }
+.text-muted  { color: var(--color-text-muted); }
+.text-sec    { color: var(--color-text-secondary); }
+
+/* ─── Divider ────────────────────────────── */
+.divider {
+  height: 1px;
+  background: var(--color-border-subtle);
+  margin: var(--space-3) 0;
+}
+
+/* ─── Section label ──────────────────────── */
+.section-label {
+  font-size: var(--text-2xs);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-2);
+}
+
+/* ─── Live badge ─────────────────────────── */
+.live-badge {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: var(--text-2xs);
+  font-family: var(--font-mono);
+  color: var(--color-bull);
+  letter-spacing: 0.08em;
+}
+
+.live-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-bull);
+  animation: livePulse 2s ease-in-out infinite;
+}
+
+@keyframes livePulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.25; }
+}
+
+/* ─── Animations ─────────────────────────── */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fillBar {
+  to { width: var(--target-width); }
+}
+
+/* ─── Utility ────────────────────────────── */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+}
