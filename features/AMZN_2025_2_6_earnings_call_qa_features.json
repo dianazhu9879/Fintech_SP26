@@ -1,0 +1,26 @@
+{
+  "file": "AMZN_2025_2_6_earnings_call_qa.mp3",
+  "management_speaker": "SPEAKER_01",
+  "num_exchanges": 1,
+  "exchanges": [
+    {
+      "exchange_idx": 0,
+      "mgmt_start": 61.777,
+      "mgmt_end": 176.662,
+      "duration_sec": 114.885,
+      "word_count": 313,
+      "answer_text": "Well, I would say that, you know, I think retailers ourselves and probably lots of other retailers are all going to have their own say on how they want to interact with agents. You know, I think that it's an emerging space. And if you think about the investments that we've made, in our fulfillment network, in our website, in all the selection that we've built, how we organize it. Most retailers are going to have kind of terms in which they're going to interact with agents, and we'll be no different that way. I do think that Rufus, if you look at how it impacts the customer experience, And if you actually use it month to month, it continues to get better and better. It's already, if you're buying something and you're on a product detail page, our product detail page provides so much information that sometimes it's hard if you're trying to find something quickly to scroll through and figure and find that little piece of information. And so we have so many customers now who just use Rufus to help them find a quick fact about a product They also use Rufus to figure out how to summarize customer reviews. So they have to read 100 customer reviews to get a sense of what people think about that product. If you look at the personalization, you know, really most prominently today, your ability to go into Rufus and ask what's happened to an order or what did I just order? Can you pull up for me this item that I ordered two months ago? The personalization keeps getting much better. And so we expect throughout 2025 that the number of occasions where you're not sure what you want to buy and you want help from Rufus are going to continue to increase and be more and more helpful to customers.",
+      "pause_latency_sec": 1.941,
+      "speech_rate_wpm": 163.47,
+      "intra_pause_count": 34,
+      "intra_pause_mean_sec": 0.735,
+      "intra_pause_max_sec": 2.641,
+      "intra_pause_total_sec": 24.991,
+      "filler_count": 13,
+      "filler_rate_per_min": 6.79,
+      "mean_pitch_hz": 162.43,
+      "pitch_variance_hz": 26.49,
+      "mean_rms_energy": 0.071601
+    }
+  ]
+}
