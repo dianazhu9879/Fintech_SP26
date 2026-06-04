@@ -19,6 +19,34 @@
   const confClass = (bias) => bias.includes('BEAR') ? 'bear' : bias.includes('BULL') ? 'bull' : 'neut';
   const dirClass = (dir) => dir === 'up' ? 'up' : dir === 'down' ? 'down' : 'flat';
   const dirArrow = (dir) => dir === 'up' ? 'UP' : dir === 'down' ? 'DOWN' : 'FLAT';
+  const sourceLabels = {
+    stats: 'Earnings/statistical source',
+    text: 'Text/transcript source',
+    audio: 'Audio source',
+  };
+
+  function panelTitle(title, source) {
+    return `<div class="panel-title"><span>${title}</span><span class="source-dot source-${source}" title="${sourceLabels[source]}"></span></div>`;
+  }
+
+  function sourceBadge(label, source) {
+    return `<div class="panel-badge">${label}</div>`;
+  }
+
+  function setupNarrative(ticker) {
+    const sectorCopy = {
+      'call-analysis': 'a large-cap technology company with call transcript coverage',
+      'software-cloud': 'a software, AI, or cloud infrastructure company',
+      'semis-hardware': 'a semiconductor or hardware company',
+      'consumer-retail': 'a consumer or retail company',
+      financials: 'a financial services company',
+      healthcare: 'a healthcare company',
+    }[ticker.sector] || 'a covered public company';
+    const inputs = ticker.decisionInputs;
+    const topics = (ticker.topics || []).slice(0, 2).map((topic) => topic.label).join(' and ');
+    const topicText = topics ? ` Key topics include ${topics}.` : '';
+    return `<strong>${ticker.symbol}</strong> is ${sectorCopy}. Latest earnings inputs show EPS surprise of ${fmtPct(inputs.epsSurprisePct, 1)} and revenue surprise of ${fmtPct(inputs.revenueSurprisePct, 1)}, with a ${displayTilt(ticker.bias).toLowerCase()} from the combined score.${topicText}`;
+  }
 
   document.getElementById('backBtn').addEventListener('click', () => {
     window.location.href = 'index.html';
@@ -129,6 +157,7 @@
           <div class="mini-stat">
             <div class="ms-label">${label}</div>
             <div class="ms-val ${cls}">${value}</div>
+            <div class="mini-stat-bar"><span class="${cls}" style="width:${Math.max(0, Math.min(100, Number(value) || 0))}%"></span></div>
             <div class="ms-sub">0-100</div>
           </div>
         `).join('')}
@@ -174,7 +203,7 @@
       return `
         <div class="chart-tooltip-row">
           <span>Tone/return correlation by horizon</span>
-          <span class="info-dot" title="Shows whether more positive call tone historically moved with later benchmark-relative returns. Positive rho means tone and excess return moved together; negative rho means they moved opposite.">?</span>
+          <span class="info-dot" tabindex="0" data-tooltip="Shows whether more positive call tone historically moved with later benchmark-relative returns. Positive rho means tone and excess return moved together; negative rho means they moved opposite.">?</span>
         </div>
         <div class="empty-state">Sentiment-by-horizon correlation is not available for this ticker in the current call-analysis snapshot.</div>
       `;
@@ -195,7 +224,7 @@
     return `
       <div class="chart-tooltip-row">
         <span>Tone vs later excess return</span>
-        <span class="info-dot" title="Positive rho means more positive call tone historically moved with later benchmark-relative outperformance at that horizon. Negative rho means the relationship moved the other way. Small-sample context only.">?</span>
+        <span class="info-dot" tabindex="0" data-tooltip="Positive rho means more positive call tone historically moved with later benchmark-relative outperformance at that horizon. Negative rho means the relationship moved the other way. Small-sample context only.">?</span>
       </div>
       <div class="horizon-chart-wrap">
         <svg class="horizon-chart" viewBox="0 0 ${width} ${height}" role="img" aria-label="Sentiment correlation by horizon">
@@ -249,7 +278,7 @@
       ['1M', 'oneMonthReturnPct', 'rgba(230,164,164,0.72)'],
     ];
     return `
-      <div class="chart-reading-note">Prior-quarter actual reaction windows are shown for calibration. The latest event’s forward reaction is not plotted here.</div>
+      <div class="chart-reading-note">Prior-quarter actual reaction windows are shown for calibration.</div>
       <div class="horizon-chart-wrap">
         <svg class="horizon-chart" viewBox="0 0 ${width} ${height}" role="img" aria-label="Past quarter reaction chart">
           <line x1="${pad.left}" x2="${width - pad.right}" y1="${zeroY}" y2="${zeroY}" class="chart-zero"></line>
@@ -258,6 +287,11 @@
             const pts = chartRows.map((row, index) => `${xFor(index)},${yFor(row[key] ?? 0)}`).join(' ');
             return `<polyline points="${pts}" fill="none" stroke="${color}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></polyline>`;
           }).join('')}
+          ${series.map(([label, key]) => chartRows.map((row, index) => `
+            <circle cx="${xFor(index)}" cy="${yFor(row[key] ?? 0)}" r="7" class="chart-hover-point">
+              <title>${row.quarter || row.reportDate} · ${label}: ${fmtPct(row[key])}</title>
+            </circle>
+          `).join('')).join('')}
           ${chartRows.map((row, index) => `<text x="${xFor(index)}" y="${height - 14}" text-anchor="middle" class="chart-label">${row.quarter || row.reportDate}</text>`).join('')}
         </svg>
       </div>
@@ -291,10 +325,18 @@
             const x = xFor(index) - 9;
             const y = Math.min(yRet(row.excessReturn5d || 0), zeroY);
             const h = Math.abs(yRet(row.excessReturn5d || 0) - zeroY);
-            return `<rect x="${x}" y="${y}" width="18" height="${Math.max(2, h)}" rx="2" fill="${(row.excessReturn5d || 0) >= 0 ? 'rgba(166,214,180,0.55)' : 'rgba(230,164,164,0.55)'}"></rect>`;
+            return `<rect x="${x}" y="${y}" width="18" height="${Math.max(2, h)}" rx="2" fill="${(row.excessReturn5d || 0) >= 0 ? 'rgba(166,214,180,0.55)' : 'rgba(230,164,164,0.55)'}"><title>${row.quarter} · 5D excess return: ${fmtPct(row.excessReturn5d)}</title></rect>`;
           }).join('')}
           <polyline points="${sentimentPts}" class="chart-line"></polyline>
           <polyline points="${riskPts}" fill="none" stroke="rgba(210,162,86,0.76)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></polyline>
+          ${rows.map((row, index) => `
+            <circle cx="${xFor(index)}" cy="${yScore(row.sentiment)}" r="7" class="chart-hover-point">
+              <title>${row.quarter} · sentiment: ${row.sentiment}/100</title>
+            </circle>
+            <circle cx="${xFor(index)}" cy="${yScore(row.risk)}" r="7" class="chart-hover-point">
+              <title>${row.quarter} · risk: ${row.risk}/100</title>
+            </circle>
+          `).join('')}
           ${rows.map((row, index) => `<text x="${xFor(index)}" y="${height - 14}" text-anchor="middle" class="chart-label">${row.quarter.replace('_20', '’')}</text>`).join('')}
         </svg>
       </div>
@@ -500,8 +542,8 @@
 
       <div class="panel">
         <div class="panel-header">
-          <div><div class="panel-title">Model Tilt</div><div class="panel-sub">${ticker.latestQuarter || 'latest event'}</div></div>
-          <div class="panel-badge">${ticker.reportDate || 'latest'}</div>
+          <div>${panelTitle('Model Tilt', 'stats')}<div class="event-period">${ticker.latestQuarter || 'latest event'}</div></div>
+          <div class="panel-badge event-date">${ticker.reportDate || 'latest'}</div>
         </div>
         ${confidenceBar(ticker)}
         <div class="prob-row">
@@ -513,7 +555,7 @@
       </div>
       <div class="panel">
         <div class="panel-header">
-          <div><div class="panel-title">Mapped Topics</div><div class="panel-sub">Shared themes marked +N</div></div>
+          <div>${panelTitle('Mapped Topics', 'text')}<div class="panel-sub">Shared themes marked +N</div></div>
         </div>
         ${topicChips(ticker.topics || [])}
       </div>
@@ -525,30 +567,30 @@
     content.innerHTML = `
       <div class="summary-banner">
         <div class="banner-label">Setup</div>
-        <div class="summary-text"><strong>${ticker.symbol}</strong> is shown with the latest earnings setup, model tilt, topic context, and call-analysis signals where available. The intent is to give analysts enough structured evidence to form their own view.</div>
+        <div class="summary-text">${setupNarrative(ticker)}</div>
       </div>
 
       <div class="panel-grid">
         <section class="panel span-6">
           <div class="panel-header">
-            <div><div class="panel-title">Decision Inputs</div><div class="panel-sub">Current event data available to analyst before forming a view</div></div>
-            <div class="panel-badge">setup</div>
+            <div>${panelTitle('Decision Inputs', 'stats')}<div class="panel-sub">Current event data available to analyst before forming a view</div></div>
+            ${sourceBadge('setup', 'stats')}
           </div>
           ${decisionCells(ticker)}
         </section>
 
         <section class="panel span-6">
           <div class="panel-header">
-            <div><div class="panel-title">Earnings Inputs</div><div class="panel-sub">Financial setup and consensus deltas</div></div>
-            <div class="panel-badge">${ticker.latestQuarter || 'latest'}</div>
+            <div>${panelTitle('Earnings Inputs', 'stats')}<div class="panel-sub">Financial setup and consensus deltas</div></div>
+            ${sourceBadge(ticker.latestQuarter || 'latest', 'stats')}
           </div>
           ${earningsRows(ticker)}
         </section>
 
         <section class="panel span-12 topic-focus-panel">
           <div class="panel-header">
-            <div><div class="panel-title">Topic Correlations</div><div class="panel-sub">Per-topic sentiment/risk, mentions, quality, and related tickers</div></div>
-            <div class="panel-badge">${(ticker.topicDetails || []).length}</div>
+            <div>${panelTitle('Topic Correlations', 'text')}<div class="panel-sub">Per-topic sentiment/risk, mentions, quality, and related tickers</div></div>
+            ${sourceBadge((ticker.topicDetails || []).length, 'text')}
           </div>
           ${topicDetails(ticker)}
         </section>
@@ -556,8 +598,8 @@
         ${call ? `
           <section class="panel span-12 tone-emphasis-panel">
             <div class="panel-header">
-              <div><div class="panel-title">Prepared vs Q&amp;A</div><div class="panel-sub">Sentiment, risk, pressure, defensiveness</div></div>
-              <div class="panel-badge">FinBERT + LLM</div>
+              <div>${panelTitle('Prepared vs Q&amp;A', 'text')}<div class="panel-sub">Sentiment, risk, pressure, defensiveness</div></div>
+              ${sourceBadge('FinBERT + LLM', 'text')}
             </div>
             <div class="tone-split">
               <div><div class="subhead">Prepared remarks</div>${meterRows(call.prepared)}</div>
@@ -567,32 +609,32 @@
 
           <section class="panel span-7">
             <div class="panel-header">
-              <div><div class="panel-title">Sentiment By Horizon</div><div class="panel-sub">Whole-call tone correlation with later excess return</div></div>
-              <div class="panel-badge">${(ticker.sentimentHorizon || []).length ? 'available' : 'placeholder'}</div>
+              <div>${panelTitle('Sentiment By Horizon', 'text')}<div class="panel-sub">Whole-call tone correlation with later excess return</div></div>
+              ${sourceBadge((ticker.sentimentHorizon || []).length ? 'available' : 'placeholder', 'text')}
             </div>
             ${sentimentHorizonPanel(ticker)}
           </section>
 
           <section class="panel span-5">
             <div class="panel-header">
-              <div><div class="panel-title">Overall Call Tone</div><div class="panel-sub">${call.turnCount} labeled turns · ${call.callDate || 'latest call'}</div></div>
-              <div class="panel-badge">text</div>
+              <div>${panelTitle('Overall Call Tone', 'text')}<div class="panel-sub">${call.turnCount} labeled turns · ${call.callDate || 'latest call'}</div></div>
+              ${sourceBadge('text', 'text')}
             </div>
             ${overallCallMetrics(call)}
           </section>
         ` : `
           <section class="panel span-7">
             <div class="panel-header">
-              <div><div class="panel-title">Sentiment By Horizon</div><div class="panel-sub">Whole-call tone correlation with later excess return</div></div>
-              <div class="panel-badge">${(ticker.sentimentHorizon || []).length ? 'available' : 'placeholder'}</div>
+              <div>${panelTitle('Sentiment By Horizon', 'text')}<div class="panel-sub">Whole-call tone correlation with later excess return</div></div>
+              ${sourceBadge((ticker.sentimentHorizon || []).length ? 'available' : 'placeholder', 'text')}
             </div>
             ${sentimentHorizonPanel(ticker)}
           </section>
 
           <section class="panel span-5">
             <div class="panel-header">
-              <div><div class="panel-title">Call Analysis</div><div class="panel-sub">Not available for this ticker in current snapshot</div></div>
-              <div class="panel-badge">earnings stats only</div>
+              <div>${panelTitle('Call Analysis', 'text')}<div class="panel-sub">Not available for this ticker in current snapshot</div></div>
+              ${sourceBadge('earnings stats only', 'stats')}
             </div>
             <div class="no-audio">This ticker has earnings statistics, model scores, fundamentals, and mapped topics. Audio/transcript analysis is currently available only for the Mag7 call-analysis set.</div>
           </section>
@@ -600,8 +642,8 @@
 
         <section class="panel span-12">
           <div class="panel-header">
-            <div><div class="panel-title">Past Quarter Actual Reactions</div><div class="panel-sub">Historical reaction windows for prior quarters</div></div>
-            <div class="panel-badge">past actuals</div>
+            <div>${panelTitle('Past Quarter Actual Reactions', 'stats')}<div class="panel-sub">Historical reaction windows for prior quarters</div></div>
+            ${sourceBadge('past actuals', 'stats')}
           </div>
           ${pastReactions(ticker)}
         </section>
@@ -609,8 +651,8 @@
         ${call ? `
           <section class="panel span-12">
             <div class="panel-header">
-              <div><div class="panel-title">Past Call Tone vs Actual Outcome</div><div class="panel-sub">Historical tone context against past 5D excess return</div></div>
-              <div class="panel-badge">past only</div>
+              <div>${panelTitle('Past Call Tone vs Actual Outcome', 'text')}<div class="panel-sub">Historical tone context against past 5D excess return</div></div>
+              ${sourceBadge('past only', 'text')}
             </div>
             ${callHistory(call)}
           </section>

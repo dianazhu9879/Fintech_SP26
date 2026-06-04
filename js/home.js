@@ -21,6 +21,7 @@
 
   function filters() {
     return [
+      { id: 'all', label: 'ALL' },
       { id: 'call-analysis', label: 'Mag7' },
       ...window.SECTIONS.filter((section) => section.id !== 'call-analysis').map((section) => ({
         id: section.id,
@@ -31,7 +32,7 @@
 
   function renderTabs() {
     tabs.innerHTML = filters().map((filter) => `
-      <button class="sector-tab ${activeFilter === filter.id ? 'active' : ''}" data-sector="all" data-filter="${filter.id}" type="button">${filter.label}</button>
+      <button class="sector-tab ${activeFilter === filter.id ? 'active' : ''}" data-sector="${filter.id}" data-filter="${filter.id}" type="button">${filter.label}</button>
     `).join('');
     tabs.querySelectorAll('button').forEach((button) => {
       button.addEventListener('click', () => {
