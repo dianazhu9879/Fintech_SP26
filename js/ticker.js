@@ -133,7 +133,7 @@
       const bodyHeight = Math.max(2, Math.abs(closeY - openY));
       const cls = candle.close >= candle.open ? 'up' : 'down';
       return `
-        <g class="candle-mark ${cls}">
+        <g class="candle-mark ${cls}" style="--candle-delay:${index * 26}ms">
           <title>${escapeHtml(candle.time)} O ${fmtNum(candle.open)} H ${fmtNum(candle.high)} L ${fmtNum(candle.low)} C ${fmtNum(candle.close)}</title>
           <line x1="${x.toFixed(2)}" x2="${x.toFixed(2)}" y1="${highY.toFixed(2)}" y2="${lowY.toFixed(2)}"></line>
           <rect x="${(x - bodyWidth / 2).toFixed(2)}" y="${top.toFixed(2)}" width="${bodyWidth.toFixed(2)}" height="${bodyHeight.toFixed(2)}" rx="1"></rect>

@@ -717,6 +717,15 @@
 .candle-baseline {
   stroke: rgba(255,255,255,0.18);
   stroke-dasharray: 3 5;
+  animation: candleBaselineIn 520ms ease forwards;
+}
+
+.candle-mark {
+  opacity: 0;
+  transform-box: fill-box;
+  transform-origin: center bottom;
+  animation: candleMarkIn 460ms cubic-bezier(.18,.78,.22,1) forwards;
+  animation-delay: var(--candle-delay, 0ms);
 }
 
 .candle-mark line {
@@ -744,6 +753,37 @@
   display: flex;
   align-items: center;
   font-size: var(--text-sm);
+}
+
+@keyframes candleMarkIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scaleY(0.72);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scaleY(1);
+  }
+}
+
+@keyframes candleBaselineIn {
+  from {
+    opacity: 0;
+    stroke-dashoffset: 24;
+  }
+  to {
+    opacity: 1;
+    stroke-dashoffset: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .candle-baseline,
+  .candle-mark {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
 }
 
 .mini-stat-grid {
