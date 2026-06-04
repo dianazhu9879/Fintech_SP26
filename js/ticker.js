@@ -615,7 +615,10 @@
     content.innerHTML = `
       <div class="summary-banner">
         <div class="banner-label">Setup</div>
-        <div class="summary-text">${setupNarrative(ticker)}</div>
+        <div>
+          <div class="summary-text">${setupNarrative(ticker)}</div>
+          <div class="model-disclaimer detail-disclaimer">Scores, tilts, correlations, and model outputs are research aids for analyst review only. They are not investment signals, recommendations, or financial advice.</div>
+        </div>
       </div>
 
       <div class="panel-grid">

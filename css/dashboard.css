@@ -46,6 +46,18 @@
   font-size: var(--text-sm);
 }
 
+.model-disclaimer {
+  margin-top: var(--space-2);
+  max-width: 860px;
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+  line-height: 1.5;
+}
+
+.detail-disclaimer {
+  max-width: none;
+}
+
 .filter-strip {
   display: flex;
   align-items: center;
