@@ -17,14 +17,14 @@ Usage:
     export HF_TOKEN=hf_yourtoken
 
     # Run on a directory of Q&A clips
-    python audio_analysis.py --input_dir ./qa_clips --output_dir ./features
+    python src/audio_alpha/legacy/audio_analysis.py --input_dir data/audio_alpha/qa_clips --output_dir data/audio_alpha/per_call_features
 
     # Override management speaker if auto-detect is wrong
-    python audio_analysis.py --input_dir ./qa_clips --output_dir ./features \\
+    python src/audio_alpha/legacy/audio_analysis.py --input_dir data/audio_alpha/qa_clips --output_dir data/audio_alpha/per_call_features \\
         --mgmt_speaker SPEAKER_01
 
     # Use medium model for better transcription accuracy (slower)
-    python audio_analysis.py --input_dir ./qa_clips --output_dir ./features \\
+    python src/audio_alpha/legacy/audio_analysis.py --input_dir data/audio_alpha/qa_clips --output_dir data/audio_alpha/per_call_features \\
         --model_size medium
 """
 
@@ -471,7 +471,7 @@ def main():
                         help="HuggingFace token. Defaults to $HF_TOKEN env var.")
     parser.add_argument("--cache_dir",    default=None,
                         help="Directory to cache transcript JSONs. Skips re-transcription "
-                             "on subsequent runs. Recommended: ./transcript_cache")
+                             "on subsequent runs. Recommended: data/audio_alpha/transcript_cache")
     args = parser.parse_args()
 
     if not args.hf_token:

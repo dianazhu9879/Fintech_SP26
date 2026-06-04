@@ -2,7 +2,7 @@
 clip_qa.py — Earnings Call Q&A Audio Clipper (Adaptive Detection)
 
 Usage:
-    python clip_qa.py --input_dir ./earnings_calls --output_dir ./qa_clips
+    python src/audio_alpha/legacy/clip_qa.py --input_dir data/audio_alpha/downloads --output_dir data/audio_alpha/qa_clips
 
 Requirements:
     pip install whisperx rapidfuzz sentence-transformers

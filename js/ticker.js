@@ -90,6 +90,85 @@
     `;
   }
 
+  function preEarningsCandlePanel(ticker) {
+    const data = window.PRE_EARNINGS_CANDLES?.[ticker.symbol];
+    if (!data) return '';
+    const candles = data.candles || [];
+    const available = data.status === 'available' && candles.length;
+    const header = `
+      <div class="panel-header">
+        <div>${panelTitle('Pre-Earnings Price Movement', 'stats')}</div>
+        ${sourceBadge(available ? '15m' : 'unavailable', 'stats')}
+      </div>
+    `;
+
+    if (!available) {
+      return `
+        <div class="panel pre-candle-panel">
+          ${header}
+          <div class="empty-state pre-candle-empty">${escapeHtml(data.note || '15m pre-earnings candles are not available for this ticker in the current snapshot.')}</div>
+        </div>
+      `;
+    }
+
+    const width = 260;
+    const height = 86;
+    const padX = 8;
+    const padY = 8;
+    const lows = candles.map((candle) => candle.low);
+    const highs = candles.map((candle) => candle.high);
+    const min = Math.min(...lows);
+    const max = Math.max(...highs);
+    const range = max - min || 1;
+    const step = (width - padX * 2) / Math.max(1, candles.length - 1);
+    const bodyWidth = Math.max(3, Math.min(7, step * 0.48));
+    const y = (value) => padY + ((max - value) / range) * (height - padY * 2);
+    const candleMarks = candles.map((candle, index) => {
+      const x = padX + index * step;
+      const openY = y(candle.open);
+      const closeY = y(candle.close);
+      const highY = y(candle.high);
+      const lowY = y(candle.low);
+      const top = Math.min(openY, closeY);
+      const bodyHeight = Math.max(2, Math.abs(closeY - openY));
+      const cls = candle.close >= candle.open ? 'up' : 'down';
+      return `
+        <g class="candle-mark ${cls}">
+          <title>${escapeHtml(candle.time)} O ${fmtNum(candle.open)} H ${fmtNum(candle.high)} L ${fmtNum(candle.low)} C ${fmtNum(candle.close)}</title>
+          <line x1="${x.toFixed(2)}" x2="${x.toFixed(2)}" y1="${highY.toFixed(2)}" y2="${lowY.toFixed(2)}"></line>
+          <rect x="${(x - bodyWidth / 2).toFixed(2)}" y="${top.toFixed(2)}" width="${bodyWidth.toFixed(2)}" height="${bodyHeight.toFixed(2)}" rx="1"></rect>
+        </g>
+      `;
+    }).join('');
+    const start = candles[0];
+    const end = candles[candles.length - 1];
+
+    return `
+      <div class="panel pre-candle-panel">
+        ${header}
+        <svg class="pre-candle-chart" viewBox="0 0 ${width} ${height}" role="img" aria-label="${ticker.symbol} 15 minute pre-earnings candlestick chart">
+          <line class="candle-baseline" x1="${padX}" x2="${width - padX}" y1="${y(start.open).toFixed(2)}" y2="${y(start.open).toFixed(2)}"></line>
+          ${candleMarks}
+        </svg>
+        <div class="pre-candle-endpoints">
+          <div>
+            <span class="endpoint-time">9:30</span>
+            <span class="endpoint-price">${fmtNum(start.open)}</span>
+          </div>
+          <div>
+            <span class="endpoint-time">4:00</span>
+            <span class="endpoint-price">${fmtNum(end.close)}</span>
+          </div>
+        </div>
+        <div class="pre-candle-stats">
+          <span>Move <strong class="${textClass(data.dayReturnPct)}">${fmtPct(data.dayReturnPct)}</strong></span>
+          <span>Range <strong>${fmtPct(data.dayRangePct)}</strong></span>
+          <span>Timezone: ET</span>
+        </div>
+      </div>
+    `;
+  }
+
   function decisionCells(ticker) {
     const inputs = ticker.decisionInputs;
     const cells = [
@@ -601,6 +680,7 @@
         </div>
         ${horizons(ticker)}
       </div>
+      ${preEarningsCandlePanel(ticker)}
       <div class="panel">
         <div class="panel-header">
           <div>${panelTitle('Mapped Topics', 'text')}<div class="panel-sub">Shared themes marked +N</div></div>
@@ -663,20 +743,20 @@
             ${audioPanel(call)}
           </section>
 
-          <section class="panel span-7">
-            <div class="panel-header">
-              <div>${panelTitle('Sentiment By Horizon', 'text')}<div class="panel-sub">Whole-call tone correlation with later excess return</div></div>
-              ${sourceBadge((ticker.sentimentHorizon || []).length ? 'available' : 'placeholder', 'text')}
-            </div>
-            ${sentimentHorizonPanel(ticker)}
-          </section>
-
           <section class="panel span-5">
             <div class="panel-header">
               <div>${panelTitle('Overall Call Tone', 'text')}<div class="panel-sub">${call.turnCount} labeled turns · ${call.callDate || 'latest call'}</div></div>
               ${sourceBadge('text', 'text')}
             </div>
             ${overallCallMetrics(call)}
+          </section>
+
+          <section class="panel span-7">
+            <div class="panel-header">
+              <div>${panelTitle('Sentiment By Horizon', 'text')}<div class="panel-sub">Whole-call tone correlation with later excess return</div></div>
+              ${sourceBadge((ticker.sentimentHorizon || []).length ? 'available' : 'placeholder', 'text')}
+            </div>
+            ${sentimentHorizonPanel(ticker)}
           </section>
         ` : `
           <section class="panel span-7">
@@ -719,11 +799,12 @@
     `;
   }
 
-  function renderDashboard(symbol) {
+  function renderDashboard(symbol, options = {}) {
+    const shouldRenderSidebar = options.renderSidebar !== false;
     const ticker = window.TICKER_DATA[symbol];
     document.title = `${symbol} · AlphaSights Earnings Intelligence`;
     dateLabel.textContent = ticker.reportDate || 'EARNINGS INTEL';
-    renderSidebar(ticker);
+    if (shouldRenderSidebar) renderSidebar(ticker);
     renderContent(ticker);
     attachTickerInteractions(ticker);
   }
@@ -742,7 +823,7 @@
     document.querySelectorAll('[data-topic-page]').forEach((button) => {
       button.addEventListener('click', () => {
         topicPage += button.dataset.topicPage === 'next' ? 1 : -1;
-        renderDashboard(ticker.symbol);
+        renderDashboard(ticker.symbol, { renderSidebar: false });
       });
     });
 

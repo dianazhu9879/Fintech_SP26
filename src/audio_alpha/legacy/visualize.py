@@ -2,11 +2,11 @@
 visualize.py
 
 Saves individual PNG charts from normalized_features_per_call.csv.
-Charts are written to --output_dir (default: ./plots/).
+Charts are written to --output_dir (default: data/audio_alpha/plots/).
 
 Usage:
-    python visualize.py --input ./normalized_features_per_call.csv
-    python visualize.py --input ./normalized_features_per_call.csv --output_dir ./plots
+    python src/audio_alpha/legacy/visualize.py --input data/audio_alpha/normalized/normalized_features_per_call.csv
+    python src/audio_alpha/legacy/visualize.py --input data/audio_alpha/normalized/normalized_features_per_call.csv --output_dir data/audio_alpha/plots
 """
 
 import argparse
@@ -358,8 +358,8 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--input",      required=True,
                         help="Path to normalized_features_per_call.csv")
-    parser.add_argument("--output_dir", default="plots",
-                        help="Directory to save PNG charts (default: ./plots)")
+    parser.add_argument("--output_dir", default="data/audio_alpha/plots",
+                        help="Directory to save PNG charts")
     args = parser.parse_args()
 
     df = pd.read_csv(args.input)

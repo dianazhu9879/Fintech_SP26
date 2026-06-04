@@ -5,13 +5,13 @@ soundfile
 scikit-learn
 tqdm
 pytest
-# audio_scraper.py
+# src/audio_alpha/legacy/audio_scraper.py
 requests
 beautifulsoup4
 selenium
 webdriver-manager
 
-# clip_qa.py
+# src/audio_alpha/legacy/clip_qa.py
 whisperx
 rapidfuzz
 sentence-transformers

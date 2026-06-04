@@ -91,8 +91,8 @@ TICKERS = {
 DATE_RANGE_START = datetime(2025, 1, 1)
 DATE_RANGE_END   = datetime(2025, 12, 31)
 
-OUTPUT_DIR = Path("./40_downloads")
-OUTPUT_DIR.mkdir(exist_ok=True)
+OUTPUT_DIR = Path("data/audio_alpha/downloads")
+OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
 HEADLESS = False  # set True to hide browser window
 
@@ -626,8 +626,8 @@ def main():
 
 def write_gaps_report():
     """
-    Scan audio_downloads for each ticker and flag which quarter windows
-    have no downloaded file. Writes audio_downloads/gaps.json.
+    Scan the audio downloads folder for each ticker and flag which quarter windows
+    have no downloaded file. Writes data/audio_alpha/downloads/gaps.json.
 
     Quarter windows (by earnings call date):
       2024 Q4 → Jan  1 – Mar 31, 2025

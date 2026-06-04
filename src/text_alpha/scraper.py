@@ -7,13 +7,13 @@ Downloads earnings call transcripts for the top 7 companies from The Motley Fool
 Companies: Apple (AAPL), Microsoft (MSFT), Nvidia (NVDA), Amazon (AMZN),
            Alphabet (GOOGL), Meta (META), Tesla (TSLA)
 
-Output: ./earnings_transcripts/<TICKER>/<TICKER>_<Quarter>_<Year>.txt
+Output: data/text_alpha/earnings_transcripts/<TICKER>/<TICKER>_<Quarter>_<Year>.txt
 
 How to run:
   pip install requests beautifulsoup4
-  python3 scraper.py
+  python3 src/text_alpha/scraper.py
 
-Then drag the 'earnings_transcripts' folder into Google Drive.
+Then drag the 'data/text_alpha/earnings_transcripts' folder into Google Drive.
 """
 
 import os
@@ -25,7 +25,7 @@ from bs4 import BeautifulSoup
 from datetime import datetime
 
 # ── Config ────────────────────────────────────────────────────────────────────
-OUTPUT_DIR = "earnings_transcripts"
+OUTPUT_DIR = "data/text_alpha/earnings_transcripts"
 DELAY = 2   # seconds between requests – be polite to the server
 
 HEADERS = {
@@ -202,7 +202,7 @@ def write_readme():
     Companies: Apple · Microsoft · Nvidia · Amazon · Alphabet · Meta · Tesla
 
     Folder structure:
-        earnings_transcripts/
+        data/text_alpha/earnings_transcripts/
           AAPL/  AAPL_Q1_2026.txt  …
           MSFT/  MSFT_Q2_2026.txt  …
           …
@@ -210,7 +210,7 @@ def write_readme():
     Source: The Motley Fool – https://www.fool.com/earnings-call-transcripts/
 
     Google Drive upload:
-    1. Select the entire 'earnings_transcripts' folder.
+    1. Select the entire 'data/text_alpha/earnings_transcripts' folder.
     2. Drag it onto https://drive.google.com
     """).strip()
 
@@ -240,7 +240,7 @@ def main():
     write_readme()
 
     print("\n" + "="*60)
-    print("  Done! Drag the 'earnings_transcripts' folder into Google Drive.")
+    print("  Done! Drag the 'data/text_alpha/earnings_transcripts' folder into Google Drive.")
     print("="*60 + "\n")
 
 

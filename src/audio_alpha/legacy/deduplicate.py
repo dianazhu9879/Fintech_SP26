@@ -9,7 +9,7 @@ def hash_file(path):
             h.update(chunk)
     return h.hexdigest()
 
-audio_dir = Path("./qa_clips")
+audio_dir = Path("data/audio_alpha/qa_clips")
 
 seen_hashes = {}
 seen_names = set()

@@ -8,11 +8,11 @@ relative to the speaker's (ticker's) own history across quarters.
 Speakers with fewer than MIN_CALLS_FOR_SPEAKER_NORM quarters of data
 fall back to a population norm computed across all speakers.
 
-Output: normalized_features.csv — one row per Q&A exchange,
+Output: data/audio_alpha/normalized/normalized_features.csv — one row per Q&A exchange,
 with both raw and z-scored feature columns.
 
 Usage:
-    python normalize.py --features_dir ./features --output ./normalized_features.csv
+    python src/audio_alpha/legacy/normalize.py --features_dir data/audio_alpha/per_call_features --output data/audio_alpha/normalized/normalized_features.csv
 """
 
 import os
@@ -274,9 +274,9 @@ def main():
     )
     parser.add_argument("--features_dir", required=True,
                         help="Directory containing *_features.json files")
-    parser.add_argument("--output",       default="normalized_features.csv",
-                        help="Output CSV path (default: normalized_features.csv)")
-    parser.add_argument("--stats_output", default="speaker_stats.json",
+    parser.add_argument("--output",       default="data/audio_alpha/normalized/normalized_features.csv",
+                        help="Output CSV path")
+    parser.add_argument("--stats_output", default="data/audio_alpha/normalized/speaker_stats.json",
                         help="Optional: save speaker normalization stats to JSON")
     args = parser.parse_args()
 
