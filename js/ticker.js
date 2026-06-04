@@ -88,6 +88,7 @@
       ['Revenue surprise', fmtPct(inputs.revenueSurprisePct), inputs.revenueSurprisePct],
       ['Guidance rev.', fmtPct(inputs.guidanceRevenueSurprisePct), inputs.guidanceRevenueSurprisePct],
       ['Model up prob.', `${ticker.probBull}%`, ticker.probBull - 50],
+      ['Confidence', `${ticker.confidence}/100`, ticker.confidence - 50],
     ];
     return `
       <div class="decision-list">
