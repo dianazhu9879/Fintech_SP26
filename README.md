@@ -1,4 +1,4 @@
-# Fintech_SP26 — Earnings Call Signal Research
+# Fintech_SP26 — AlphaSights - Earnings Call Signal Research
 
 **TQT · Spring 2026**
 
