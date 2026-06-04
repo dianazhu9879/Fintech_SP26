@@ -1,0 +1,67 @@
+period,primary_topic,sentiment_score,risk_intensity_score,uncertainty_score,finbert_positive,finbert_negative
+Q1_2026,AI Factory Deployments,0.7333,0.1,0.2,0.1127,0.0214
+Q1_2026,Blackwell Architecture,0.8,0.0,0.1,0.1284,0.0201
+Q1_2026,Data Center Revenue,-0.45,0.0,0.65,0.389,0.4814
+Q1_2026,Enterprise AI Adoption,0.8,0.1,0.2,0.1144,0.023
+Q1_2026,Guidance / Outlook,0.0,0.15,0.45,0.1729,0.0221
+Q1_2026,Inference Performance,0.6,0.2,0.3,0.2453,0.01
+Q1_2026,Macro / Demand,0.1,0.0,0.5,0.0594,0.0249
+Q1_2026,Networking Solutions,0.7,0.0,0.15,0.3811,0.0131
+Q1_2026,Other,0.0,0.0,0.0,0.0279,0.0282
+Q1_2026,Regulation / Geopolitics,-0.5,0.1667,0.6667,0.1578,0.0397
+Q2_2025,AI Factory Deployments,0.7,0.1,0.2,0.1533,0.0165
+Q2_2025,Blackwell Architecture,0.2286,0.1857,0.3571,0.099,0.0277
+Q2_2025,Capital Allocation,0.1,0.3,0.5,0.1717,0.0167
+Q2_2025,Data Center Revenue,0.7,0.14,0.2,0.2726,0.0164
+Q2_2025,Generative AI Applications,0.8,0.3,0.2,0.2954,0.0518
+Q2_2025,Hopper Architecture,0.7,0.2,0.25,0.1758,0.0317
+Q2_2025,Macro / Demand,0.05,0.2,0.4,0.2987,0.0526
+Q2_2025,Other,0.0,0.0,0.0,0.0239,0.0364
+Q2_2025,Sovereign AI Initiatives,0.6,0.0,0.2,0.4847,0.0091
+Q2_2026,AI Factory Deployments,0.8,0.1,0.15,0.2006,0.0297
+Q2_2026,Blackwell Architecture,0.45,0.075,0.325,0.3954,0.01
+Q2_2026,Data Center Revenue,0.2333,0.2667,0.4167,0.282,0.0173
+Q2_2026,Generative AI Applications,0.8,0.0,0.1,0.4465,0.0139
+Q2_2026,Macro / Demand,0.15,0.2,0.45,0.2977,0.0118
+Q2_2026,Networking Solutions,0.7,0.0,0.15,0.1298,0.0125
+Q2_2026,Other,0.0,0.0,0.0,0.0228,0.0322
+Q2_2026,Regulation / Geopolitics,-0.3,0.5,0.6,0.1037,0.0161
+Q3_2025,AI Factory Deployments,0.8,0.0,0.1,0.1189,0.0317
+Q3_2025,Blackwell Architecture,0.2,0.2143,0.3857,0.2365,0.0526
+Q3_2025,Data Center Revenue,0.75,0.1,0.2,0.3347,0.0462
+Q3_2025,Generative AI Applications,0.3,0.05,0.35,0.1268,0.0263
+Q3_2025,Hopper Architecture,0.3,0.2,0.4,0.3375,0.0252
+Q3_2025,Inference Performance,0.4667,0.0,0.3,0.1612,0.0211
+Q3_2025,Margins / Profitability,0.15,0.1,0.45,0.1735,0.0225
+Q3_2025,Networking Solutions,0.45,0.05,0.3,0.2118,0.442
+Q3_2025,Other,0.0,0.0,0.0,0.0246,0.0318
+Q3_2025,Regulation / Geopolitics,0.0,0.2,0.3,0.2343,0.0139
+Q3_2025,Sovereign AI Initiatives,0.1,0.25,0.45,0.164,0.0666
+Q3_2026,AI Factory Deployments,0.75,0.0,0.15,0.1235,0.0522
+Q3_2026,Blackwell Architecture,0.3,0.2,0.4,0.1012,0.0487
+Q3_2026,Capital Allocation,0.4,0.05,0.25,0.2048,0.0152
+Q3_2026,Data Center Revenue,0.36,0.2,0.34,0.3552,0.0213
+Q3_2026,Generative AI Applications,0.55,0.0,0.2,0.1393,0.0216
+Q3_2026,Inference Performance,0.4,0.0,0.35,0.1038,0.0173
+Q3_2026,Macro / Demand,0.35,0.0,0.3,0.1896,0.029
+Q3_2026,Margins / Profitability,0.15,0.3,0.5,0.1561,0.02
+Q3_2026,Other,0.0,0.0,0.0,0.0336,0.0243
+Q4_2025,AI Factory Deployments,0.8,0.0,0.2,0.1075,0.024
+Q4_2025,Blackwell Architecture,0.6167,0.1,0.2,0.2587,0.018
+Q4_2025,Data Center Revenue,0.52,0.16,0.28,0.197,0.0275
+Q4_2025,Enterprise AI Adoption,0.65,0.1,0.2,0.1492,0.0212
+Q4_2025,Generative AI Applications,0.8,0.1,0.2,0.0636,0.0276
+Q4_2025,Hopper Architecture,0.0,0.0,0.5,0.0855,0.0171
+Q4_2025,Macro / Demand,-0.3,0.5,0.6,0.2851,0.0282
+Q4_2025,Margins / Profitability,-0.3,0.5,0.6,0.1618,0.0421
+Q4_2025,Other,0.0,0.0,0.25,0.059,0.024
+Q4_2026,AI Factory Deployments,0.775,0.0,0.1,0.3013,0.0158
+Q4_2026,Blackwell Architecture,0.3333,0.1333,0.3667,0.2459,0.0134
+Q4_2026,Capital Allocation,0.4333,0.1333,0.2333,0.3067,0.013
+Q4_2026,Data Center Revenue,0.3667,0.1333,0.35,0.2393,0.0269
+Q4_2026,Generative AI Applications,0.7,0.15,0.25,0.069,0.0336
+Q4_2026,Inference Performance,0.4,0.0,0.2,0.0877,0.0216
+Q4_2026,Macro / Demand,0.15,0.25,0.4,0.2362,0.0182
+Q4_2026,Margins / Profitability,0.45,0.2,0.35,0.2053,0.016
+Q4_2026,Networking Solutions,0.7,0.05,0.15,0.4065,0.0173
+Q4_2026,Other,0.0,0.0,0.1667,0.0334,0.0241

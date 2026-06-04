@@ -5,3 +5,14 @@ soundfile
 scikit-learn
 tqdm
 pytest
+# audio_scraper.py
+requests
+beautifulsoup4
+selenium
+webdriver-manager
+
+# clip_qa.py
+whisperx
+rapidfuzz
+sentence-transformers
+numpy

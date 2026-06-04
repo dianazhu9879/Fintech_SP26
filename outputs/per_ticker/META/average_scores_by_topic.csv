@@ -1,0 +1,17 @@
+primary_topic,sentiment_score,risk_intensity_score,uncertainty_score,confidence_score,guidance_strength_score,finbert_positive,finbert_negative
+AI Integration,0.3756,0.2311,0.3422,0.7911,0.4778,0.2205,0.0158
+Advertising Performance,0.3143,0.2429,0.35,0.7929,0.5071,0.4052,0.0623
+Capital Allocation,0.1,0.3,0.4,0.7333,0.4667,0.2858,0.1123
+Consumer Electronics Trends,0.26,0.26,0.4,0.76,0.48,0.2583,0.036
+Content Recommendation Systems,0.3,0.25,0.35,0.8,0.6,0.2979,0.0129
+Guidance / Outlook,0.22,0.28,0.4,0.77,0.56,0.3732,0.1115
+Infrastructure Investments,0.1462,0.2385,0.4154,0.7615,0.3923,0.3343,0.0374
+Macro / Demand,0.1154,0.2846,0.4462,0.6846,0.3308,0.2573,0.1982
+Margins / Profitability,0.14,0.32,0.38,0.78,0.36,0.3467,0.2086
+Market Positioning,0.6,0.0,0.2,0.8,0.5,0.1123,0.0543
+Monetization Strategies,0.44,0.14,0.3,0.8,0.54,0.2255,0.0137
+Other,0.0,0.0,0.0,0.4615,0.0,0.1306,0.0445
+Product Innovations,0.6,0.2,0.3,0.8,0.5,0.1186,0.0191
+Reality Labs Developments,0.7,0.2,0.2,0.9,0.8,0.1135,0.0228
+Regulatory and Compliance Efforts,0.2,0.1667,0.4,0.7333,0.1667,0.0901,0.0409
+User Growth Metrics,0.6333,0.1833,0.2667,0.85,0.5333,0.5709,0.024

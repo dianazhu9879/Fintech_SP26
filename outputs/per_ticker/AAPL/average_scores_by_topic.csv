@@ -1,0 +1,15 @@
+primary_topic,sentiment_score,risk_intensity_score,uncertainty_score,confidence_score,guidance_strength_score,finbert_positive,finbert_negative
+AI and Machine Learning in Products,0.3692,0.1231,0.2846,0.7615,0.3308,0.2923,0.0229
+Apple Intelligence,0.3675,0.0725,0.2975,0.785,0.16,0.2539,0.0175
+Capital Allocation,0.1286,0.1571,0.3143,0.7857,0.0714,0.1851,0.0325
+Emerging Market Performance,0.525,0.0833,0.2167,0.8333,0.2833,0.4973,0.0887
+Guidance / Outlook,0.3667,0.2533,0.3333,0.81,0.5467,0.3448,0.0472
+Mac Performance,0.4125,0.05,0.225,0.8,0.25,0.3077,0.0326
+Macro / Demand,0.15,0.34,0.43,0.76,0.33,0.2519,0.1481
+Margins / Profitability,0.3,0.1722,0.3278,0.7944,0.4889,0.4182,0.0397
+Other,0.0,0.0,0.1429,0.6143,0.0,0.0387,0.0311
+Regulation / Geopolitics,-0.05,0.44,0.52,0.72,0.15,0.0841,0.0471
+Services Growth,0.413,0.1174,0.287,0.8174,0.4174,0.3754,0.0624
+Supply Chain and Manufacturing,-0.1692,0.2538,0.5385,0.7308,0.0769,0.1347,0.0504
+iPad Innovations,0.1667,0.1333,0.3,0.7667,0.0667,0.3099,0.0554
+iPhone Lineup,0.2769,0.1231,0.3173,0.7942,0.2538,0.2671,0.0863

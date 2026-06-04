@@ -1,0 +1,250 @@
+{
+  "AAPL": {
+    "pause_latency_sec": {
+      "mean": 1.607653846153846,
+      "std": 1.863897875312046,
+      "n_calls": 4,
+      "norm_type": "speaker"
+    },
+    "speech_rate_wpm": {
+      "mean": 123.89134615384616,
+      "std": 23.62191969991433,
+      "n_calls": 4,
+      "norm_type": "speaker"
+    },
+    "filler_rate_per_min": {
+      "mean": 5.357884615384615,
+      "std": 3.9121170922261626,
+      "n_calls": 4,
+      "norm_type": "speaker"
+    },
+    "intra_pause_count": {
+      "mean": 15.403846153846153,
+      "std": 11.27248883454257,
+      "n_calls": 4,
+      "norm_type": "speaker"
+    },
+    "intra_pause_mean_sec": {
+      "mean": 0.883173076923077,
+      "std": 0.16351491161285162,
+      "n_calls": 4,
+      "norm_type": "speaker"
+    },
+    "intra_pause_max_sec": {
+      "mean": 2.199576923076923,
+      "std": 0.955222494277988,
+      "n_calls": 4,
+      "norm_type": "speaker"
+    },
+    "intra_pause_total_sec": {
+      "mean": 13.746365384615387,
+      "std": 9.773242906174593,
+      "n_calls": 4,
+      "norm_type": "speaker"
+    },
+    "mean_pitch_hz": {
+      "mean": 121.19865384615386,
+      "std": 9.382300196426634,
+      "n_calls": 4,
+      "norm_type": "speaker"
+    },
+    "pitch_variance_hz": {
+      "mean": 28.095384615384617,
+      "std": 32.579395296542664,
+      "n_calls": 4,
+      "norm_type": "speaker"
+    },
+    "mean_rms_energy": {
+      "mean": 0.05856346153846155,
+      "std": 0.008042096971833532,
+      "n_calls": 4,
+      "norm_type": "speaker"
+    }
+  },
+  "AMZN": {
+    "pause_latency_sec": {
+      "mean": 1.8156206896551723,
+      "std": 1.5109282485987854,
+      "n_calls": 4,
+      "norm_type": "speaker"
+    },
+    "speech_rate_wpm": {
+      "mean": 169.0210344827586,
+      "std": 12.176228405271473,
+      "n_calls": 4,
+      "norm_type": "speaker"
+    },
+    "filler_rate_per_min": {
+      "mean": 5.442413793103449,
+      "std": 2.4993865749882564,
+      "n_calls": 4,
+      "norm_type": "speaker"
+    },
+    "intra_pause_count": {
+      "mean": 34.93103448275862,
+      "std": 26.790098163424325,
+      "n_calls": 4,
+      "norm_type": "speaker"
+    },
+    "intra_pause_mean_sec": {
+      "mean": 0.6970344827586207,
+      "std": 0.06898420251799925,
+      "n_calls": 4,
+      "norm_type": "speaker"
+    },
+    "intra_pause_max_sec": {
+      "mean": 1.84,
+      "std": 0.7566626442099922,
+      "n_calls": 4,
+      "norm_type": "speaker"
+    },
+    "intra_pause_total_sec": {
+      "mean": 24.76720689655172,
+      "std": 19.531559246473954,
+      "n_calls": 4,
+      "norm_type": "speaker"
+    },
+    "mean_pitch_hz": {
+      "mean": 147.59689655172414,
+      "std": 12.644938033923829,
+      "n_calls": 4,
+      "norm_type": "speaker"
+    },
+    "pitch_variance_hz": {
+      "mean": 57.734827586206904,
+      "std": 33.67676473482757,
+      "n_calls": 4,
+      "norm_type": "speaker"
+    },
+    "mean_rms_energy": {
+      "mean": 0.057383379310344824,
+      "std": 0.0213697072083923,
+      "n_calls": 4,
+      "norm_type": "speaker"
+    }
+  },
+  "AVGO": {
+    "pause_latency_sec": {
+      "mean": 1.2726716417910449,
+      "std": 0.9442976929822005,
+      "n_calls": 4,
+      "norm_type": "speaker"
+    },
+    "speech_rate_wpm": {
+      "mean": 123.46402985074627,
+      "std": 22.041088493971785,
+      "n_calls": 4,
+      "norm_type": "speaker"
+    },
+    "filler_rate_per_min": {
+      "mean": 3.1804477611940296,
+      "std": 3.3723669562165495,
+      "n_calls": 4,
+      "norm_type": "speaker"
+    },
+    "intra_pause_count": {
+      "mean": 26.08955223880597,
+      "std": 24.68083009217673,
+      "n_calls": 4,
+      "norm_type": "speaker"
+    },
+    "intra_pause_mean_sec": {
+      "mean": 0.7087611940298508,
+      "std": 0.24665213447480427,
+      "n_calls": 4,
+      "norm_type": "speaker"
+    },
+    "intra_pause_max_sec": {
+      "mean": 1.7252388059701493,
+      "std": 1.1368251256680018,
+      "n_calls": 4,
+      "norm_type": "speaker"
+    },
+    "intra_pause_total_sec": {
+      "mean": 19.221343283582087,
+      "std": 18.125436433242715,
+      "n_calls": 4,
+      "norm_type": "speaker"
+    },
+    "mean_pitch_hz": {
+      "mean": 186.38119402985075,
+      "std": 41.79807091106029,
+      "n_calls": 4,
+      "norm_type": "speaker"
+    },
+    "pitch_variance_hz": {
+      "mean": 73.39537313432837,
+      "std": 56.72862828997094,
+      "n_calls": 4,
+      "norm_type": "speaker"
+    },
+    "mean_rms_energy": {
+      "mean": 0.04143665671641791,
+      "std": 0.018022559737772628,
+      "n_calls": 4,
+      "norm_type": "speaker"
+    }
+  },
+  "GOOG": {
+    "pause_latency_sec": {
+      "mean": 2.2156666666666665,
+      "std": 1.5809253132750598,
+      "n_calls": 4,
+      "norm_type": "speaker"
+    },
+    "speech_rate_wpm": {
+      "mean": 146.877037037037,
+      "std": 12.108145006505973,
+      "n_calls": 4,
+      "norm_type": "speaker"
+    },
+    "filler_rate_per_min": {
+      "mean": 7.577407407407407,
+      "std": 3.2064137558632657,
+      "n_calls": 4,
+      "norm_type": "speaker"
+    },
+    "intra_pause_count": {
+      "mean": 30.074074074074073,
+      "std": 14.464614451310867,
+      "n_calls": 4,
+      "norm_type": "speaker"
+    },
+    "intra_pause_mean_sec": {
+      "mean": 0.7565555555555555,
+      "std": 0.09249670818813513,
+      "n_calls": 4,
+      "norm_type": "speaker"
+    },
+    "intra_pause_max_sec": {
+      "mean": 1.9585555555555556,
+      "std": 0.6752196413779475,
+      "n_calls": 4,
+      "norm_type": "speaker"
+    },
+    "intra_pause_total_sec": {
+      "mean": 22.69392592592592,
+      "std": 10.51860044772675,
+      "n_calls": 4,
+      "norm_type": "speaker"
+    },
+    "mean_pitch_hz": {
+      "mean": 126.67629629629629,
+      "std": 41.000441850165856,
+      "n_calls": 4,
+      "norm_type": "speaker"
+    },
+    "pitch_variance_hz": {
+      "mean": 116.42555555555555,
+      "std": 139.12725902052443,
+      "n_calls": 4,
+      "norm_type": "speaker"
+    },
+    "mean_rms_energy": {
+      "mean": 0.07185311111111112,
+      "std": 0.009292854241228471,
+      "n_calls": 4,
+      "norm_type": "speaker"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "file": "AVGO_2025_3_6_earnings_call_qa.mp3",
+  "management_speaker": "SPEAKER_02",
+  "num_exchanges": 1,
+  "exchanges": [
+    {
+      "exchange_idx": 1,
+      "mgmt_start": 33.899,
+      "mgmt_end": 56.579,
+      "duration_sec": 22.68,
+      "word_count": 59,
+      "answer_text": "Thank you, Cherie. Broadcom currently plans to report its earnings for the second quarter of fiscal year 2025 after close of market on Thursday, June 5, 2025. A public webcast of Broadcom's earnings conference call will follow at 2 p.m. Pacific. That will conclude our earnings call today. Thank you all for joining. Cherie, you may end the call.",
+      "pause_latency_sec": 0.827,
+      "speech_rate_wpm": 156.08,
+      "intra_pause_count": 7,
+      "intra_pause_mean_sec": 0.672,
+      "intra_pause_max_sec": 0.92,
+      "intra_pause_total_sec": 4.702,
+      "filler_count": 0,
+      "filler_rate_per_min": 0.0,
+      "mean_pitch_hz": 201.19,
+      "pitch_variance_hz": 35.6,
+      "mean_rms_energy": 0.019728
+    }
+  ]
+}

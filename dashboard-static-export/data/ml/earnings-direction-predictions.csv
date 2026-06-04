@@ -1,0 +1,41 @@
+ticker,company_name,signal_quarter,target_quarter,target_report_date,target_horizon,probability_bullish,decision_threshold,predicted_direction,actual_direction,actual_return_pct,actual_one_week_return_pct,correct
+AAPL,Apple Inc.,CY2026Q1,CY2026Q1,2026-04-30,one_week,0.684,0.6,bullish,bullish,8.1,8.1,true
+ABNB,"Airbnb, Inc.",CY2026Q1,CY2026Q1,2026-05-07,one_week,0.6024,0.6,bullish,bearish,-5.42,-5.42,false
+AI,"C3.ai, Inc.",CY2026Q1,CY2026Q1,2026-02-25,one_week,0.3741,0.6,bearish,bearish,-8.92,-8.92,true
+AMAT,APPLIED MATERIALS INC /DE,CY2026Q1,CY2026Q1,2026-02-12,one_week,0.389,0.6,bearish,bullish,13.75,13.75,false
+AMD,ADVANCED MICRO DEVICES INC,CY2026Q1,CY2026Q1,2026-05-05,one_week,0.5756,0.6,bearish,bullish,25.4,25.4,false
+AMZN,AMAZON COM INC,CY2026Q1,CY2026Q1,2026-04-29,one_week,0.6364,0.6,bullish,bullish,3.09,3.09,true
+APP,AppLovin Corp,CY2026Q1,CY2026Q1,2026-05-06,one_week,0.5577,0.6,bearish,bullish,3.48,3.48,false
+AVGO,Broadcom Inc.,CY2026Q1,CY2026Q1,2026-03-04,one_week,0.5906,0.6,bearish,bullish,5.81,5.81,false
+CMG,CHIPOTLE MEXICAN GRILL INC,CY2026Q1,CY2026Q1,2026-04-29,one_week,0.4287,0.6,bearish,bullish,0.85,0.85,false
+COST,COSTCO WHOLESALE CORP /NEW,CY2026Q1,CY2026Q1,2026-03-05,one_week,0.4676,0.6,bearish,bullish,2.63,2.63,false
+CRM,"Salesforce, Inc.",CY2026Q1,CY2026Q1,2026-02-25,one_week,0.3731,0.6,bearish,bullish,5.03,5.03,false
+CRWD,"CrowdStrike Holdings, Inc.",CY2026Q1,CY2026Q1,2026-03-03,one_week,0.5328,0.6,bearish,bullish,12.93,12.93,false
+DDOG,"Datadog, Inc.",CY2026Q1,CY2026Q1,2026-05-07,one_week,0.6212,0.6,bullish,bullish,10.2,10.2,true
+DOCN,"DigitalOcean Holdings, Inc.",CY2026Q1,CY2026Q1,2026-05-05,one_week,0.4469,0.6,bearish,bullish,4.2,4.2,false
+GOOGL,Alphabet Inc.,CY2026Q1,CY2026Q1,2026-04-29,one_week,0.5503,0.6,bearish,bullish,13.73,13.73,false
+GTLB,Gitlab Inc.,CY2026Q1,CY2026Q1,2026-03-03,one_week,0.2549,0.6,bearish,bearish,-13.26,-13.26,true
+JPM,JPMORGAN CHASE & CO,CY2026Q1,CY2026Q1,2026-04-14,one_week,0.4551,0.6,bearish,bullish,0.61,0.61,false
+KO,COCA COLA CO,CY2026Q1,CY2026Q1,2026-04-28,one_week,0.5535,0.6,bearish,bullish,1.12,1.12,false
+LLY,ELI LILLY & Co,CY2026Q1,CY2026Q1,2026-04-30,one_week,0.8139,0.6,bullish,bullish,1.48,1.48,true
+MCD,MCDONALDS CORP,CY2026Q1,CY2026Q1,2026-05-07,one_week,0.4227,0.6,bearish,bearish,-2.58,-2.58,true
+META,"Meta Platforms, Inc.",CY2026Q1,CY2026Q1,2026-04-29,one_week,0.5795,0.6,bearish,bearish,-7.82,-7.82,true
+MRK,"Merck & Co., Inc.",CY2026Q1,CY2026Q1,2026-04-30,one_week,0.4237,0.6,bearish,bullish,2.02,2.02,false
+MSFT,MICROSOFT CORP,CY2026Q1,CY2026Q1,2026-04-29,one_week,0.5117,0.6,bearish,bearish,-0.87,-0.87,true
+MU,MICRON TECHNOLOGY INC,CY2026Q1,CY2026Q1,2026-03-18,one_week,0.2808,0.6,bearish,bearish,-23.02,-23.02,true
+NET,"Cloudflare, Inc.",CY2026Q1,CY2026Q1,2026-05-07,one_week,0.6199,0.6,bullish,bearish,-23.07,-23.07,false
+NOW,"ServiceNow, Inc.",CY2026Q1,CY2026Q1,2026-04-22,one_week,0.5455,0.6,bearish,bearish,-14.32,-14.32,true
+NVDA,NVIDIA CORP,CY2026Q1,CY2026Q1,2026-02-25,one_week,0.4002,0.6,bearish,bearish,-6.25,-6.25,true
+ORCL,ORACLE CORP,CY2026Q1,CY2026Q1,2026-03-10,one_week,0.5706,0.6,bearish,bullish,2.34,2.34,false
+PANW,Palo Alto Networks Inc,CY2026Q1,CY2026Q1,2026-02-17,one_week,0.612,0.6,bullish,bearish,-11.41,-11.41,false
+PG,PROCTER & GAMBLE Co,CY2026Q1,CY2026Q1,2026-04-24,one_week,0.4607,0.6,bearish,bearish,-3.21,-3.21,true
+PLTR,Palantir Technologies Inc.,CY2026Q1,CY2026Q1,2026-05-04,one_week,0.5633,0.6,bearish,bearish,-6.87,-6.87,true
+QCOM,QUALCOMM INC/DE,CY2026Q1,CY2026Q1,2026-04-29,one_week,0.6214,0.6,bullish,bullish,29.84,29.84,true
+SMCI,"Super Micro Computer, Inc.",CY2026Q1,CY2026Q1,2026-05-05,one_week,0.5913,0.6,bearish,bullish,14.98,14.98,false
+SNOW,Snowflake Inc.,CY2026Q1,CY2026Q1,2026-02-25,one_week,0.5871,0.6,bearish,bullish,4.87,4.87,false
+UNH,UNITEDHEALTH GROUP INC,CY2026Q1,CY2026Q1,2026-04-21,one_week,0.6004,0.6,bullish,bullish,7.15,7.15,true
+V,VISA INC.,CY2026Q1,CY2026Q1,2026-04-28,one_week,0.4896,0.6,bearish,bullish,3.07,3.07,false
+VRTX,VERTEX PHARMACEUTICALS INC / MA,CY2026Q1,CY2026Q1,2026-05-04,one_week,0.8172,0.6,bullish,bullish,4.29,4.29,true
+WMT,Walmart Inc.,CY2026Q1,CY2026Q1,2026-02-19,one_week,0.6047,0.6,bullish,bullish,2.47,2.47,true
+XYZ,"Block, Inc.",CY2026Q1,CY2026Q1,2026-05-07,one_week,0.4075,0.6,bearish,bullish,0.31,0.31,false
+ZS,"Zscaler, Inc.",CY2026Q1,CY2026Q1,2026-02-26,one_week,0.5055,0.6,bearish,bearish,-1.97,-1.97,true

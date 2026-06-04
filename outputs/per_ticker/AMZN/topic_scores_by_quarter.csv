@@ -1,0 +1,37 @@
+period,primary_topic,sentiment_score,risk_intensity_score,uncertainty_score,finbert_positive,finbert_negative
+Q1_2024,AWS Growth and Trends,0.5,0.2,0.3,0.1228,0.0185
+Q1_2024,Capital Allocation,0.6,0.4,0.3,0.7843,0.018
+Q1_2024,Cost Management and Efficiency,0.3,0.15,0.25,0.4013,0.0196
+Q1_2024,Delivery Speed and Logistics,0.0,0.25,0.4,0.4245,0.0224
+Q1_2024,E-commerce Store Performance,0.6,0.14,0.26,0.3275,0.0165
+Q1_2024,Generative AI Initiatives,0.0,0.3,0.5,0.1083,0.0201
+Q1_2024,Guidance / Outlook,0.15,0.45,0.55,0.4775,0.0619
+Q1_2024,Other,0.0,0.0,0.0,0.5078,0.0107
+Q1_2024,Third-Party Seller Dynamics,0.6,0.0,0.2,0.344,0.0204
+Q2_2024,AWS Growth and Trends,0.325,0.175,0.2875,0.3267,0.074
+Q2_2024,Cost Management and Efficiency,0.6,0.2,0.2,0.1977,0.0223
+Q2_2024,E-commerce Store Performance,0.6,0.05,0.2,0.8559,0.0436
+Q2_2024,Generative AI Initiatives,0.3,0.3,0.4,0.0763,0.0277
+Q2_2024,Guidance / Outlook,0.25,0.3,0.45,0.4366,0.0691
+Q2_2024,Macro / Demand,-0.3,0.55,0.55,0.2128,0.2923
+Q2_2024,Margins / Profitability,0.0,0.35,0.4,0.4126,0.2366
+Q2_2024,Other,0.0,0.0,0.0,0.3921,0.0104
+Q3_2025,AWS Growth and Trends,0.4,0.2,0.3333,0.2579,0.0132
+Q3_2025,Cost Management and Efficiency,0.6,0.1,0.25,0.2988,0.0117
+Q3_2025,E-commerce Store Performance,0.35,0.15,0.3,0.2624,0.0188
+Q3_2025,Generative AI Initiatives,0.475,0.1,0.325,0.1956,0.0452
+Q3_2025,Guidance / Outlook,-0.3,0.7,0.8,0.0334,0.1201
+Q4_2024,AWS Growth and Trends,0.15,0.275,0.4,0.4666,0.0419
+Q4_2024,Delivery Speed and Logistics,0.2333,0.1333,0.2667,0.314,0.0421
+Q4_2024,E-commerce Store Performance,0.8,0.1,0.2,0.5781,0.0171
+Q4_2024,Generative AI Initiatives,0.35,0.2,0.35,0.1034,0.0338
+Q4_2024,Guidance / Outlook,0.15,0.55,0.55,0.2944,0.2252
+Q4_2024,Other,0.0,0.0,0.0,0.483,0.0105
+Q4_2025,AWS Growth and Trends,0.6,0.225,0.275,0.3131,0.0159
+Q4_2025,Capital Allocation,0.0,0.2,0.5,0.111,0.0149
+Q4_2025,Cost Management and Efficiency,0.0,0.3,0.5,0.0886,0.0178
+Q4_2025,Customer Experience Innovations,0.7,0.2,0.2,0.1423,0.0192
+Q4_2025,E-commerce Store Performance,0.4,0.2,0.3,0.1985,0.0144
+Q4_2025,Generative AI Initiatives,0.4,0.2,0.3,0.2174,0.0148
+Q4_2025,Guidance / Outlook,0.15,0.4,0.55,0.4183,0.0473
+Q4_2025,Other,0.0,0.0,0.0,0.3038,0.0107

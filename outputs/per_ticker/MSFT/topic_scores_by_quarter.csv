@@ -1,0 +1,35 @@
+period,primary_topic,sentiment_score,risk_intensity_score,uncertainty_score,finbert_positive,finbert_negative
+Q1_2025,AI Integration and Development,0.5333,0.05,0.2833,0.1744,0.024
+Q1_2025,Azure Data Center Expansion,-0.6,0.0,0.7,0.0567,0.1888
+Q1_2025,Capital Allocation,0.0,0.3,0.5,0.1234,0.0119
+Q1_2025,Guidance / Outlook,0.0,0.0,0.3,0.0698,0.029
+Q1_2025,Macro / Demand,-0.4,0.5,0.6,0.0727,0.1151
+Q1_2025,Microsoft 365 Copilot Adoption,0.5,0.1,0.2,0.1079,0.0475
+Q1_2025,Microsoft Cloud Growth,0.5,0.24,0.3,0.3037,0.1619
+Q1_2025,Other,0.3,0.0,0.0,0.4998,0.0132
+Q1_2026,AI Integration and Development,0.21,0.34,0.4,0.1649,0.0971
+Q1_2026,Azure Data Center Expansion,-0.3,0.0,0.6,0.12,0.2695
+Q1_2026,Guidance / Outlook,0.0,0.5,0.5,0.0303,0.0285
+Q1_2026,Margins / Profitability,0.6,0.0,0.2,0.0725,0.0299
+Q1_2026,Microsoft Cloud Growth,0.45,0.1667,0.3167,0.1912,0.0206
+Q1_2026,Other,0.4,0.0,0.0,0.2842,0.0197
+Q2_2025,AI Integration and Development,0.625,0.075,0.2,0.1951,0.0189
+Q2_2025,Capital Allocation,0.6,0.2,0.2,0.0842,0.0258
+Q2_2025,Macro / Demand,0.8,0.1,0.2,0.3323,0.0217
+Q2_2025,Microsoft 365 Copilot Adoption,0.6,0.05,0.2,0.1115,0.0193
+Q2_2025,Microsoft Cloud Growth,0.4667,0.2333,0.3167,0.4055,0.098
+Q2_2025,Other,0.15,0.0,0.0,0.2398,0.0173
+Q2_2026,AI Integration and Development,0.4,0.25,0.35,0.2957,0.0155
+Q2_2026,Azure Data Center Expansion,0.125,0.225,0.325,0.2166,0.0807
+Q2_2026,Capital Allocation,0.15,0.3,0.4,0.4571,0.0116
+Q2_2026,Guidance / Outlook,0.0,0.4,0.5,0.0414,0.0262
+Q2_2026,Margins / Profitability,0.4,0.0,0.1,0.8205,0.0178
+Q2_2026,Microsoft 365 Copilot Adoption,0.7,0.0,0.2,0.1387,0.0206
+Q2_2026,Microsoft Cloud Growth,0.5429,0.1143,0.2286,0.3167,0.0787
+Q2_2026,Other,0.0,0.0,0.0,0.1878,0.0336
+Q4_2025,AI Integration and Development,0.6167,0.0833,0.2333,0.1052,0.0202
+Q4_2025,Guidance / Outlook,0.4,0.15,0.3,0.09,0.072
+Q4_2025,Margins / Profitability,0.5,0.15,0.25,0.2383,0.0206
+Q4_2025,Microsoft 365 Copilot Adoption,0.6,0.0,0.2,0.0642,0.034
+Q4_2025,Microsoft Cloud Growth,0.6333,0.2,0.25,0.3613,0.0555
+Q4_2025,Other,0.2667,0.0,0.0,0.3031,0.0173

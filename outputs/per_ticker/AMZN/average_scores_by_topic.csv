@@ -1,0 +1,13 @@
+primary_topic,sentiment_score,risk_intensity_score,uncertainty_score,confidence_score,guidance_strength_score,finbert_positive,finbert_negative
+AWS Growth and Trends,0.38,0.208,0.316,0.832,0.504,0.3059,0.0383
+Capital Allocation,0.3,0.3,0.4,0.8,0.6,0.4477,0.0165
+Cost Management and Efficiency,0.4,0.1667,0.2833,0.8333,0.5667,0.2811,0.0171
+Customer Experience Innovations,0.7,0.2,0.2,0.9,0.8,0.1423,0.0192
+Delivery Speed and Logistics,0.14,0.18,0.32,0.82,0.3,0.3582,0.0342
+E-commerce Store Performance,0.5143,0.1357,0.2643,0.8429,0.6071,0.3838,0.0208
+Generative AI Initiatives,0.3688,0.1875,0.3438,0.8125,0.4062,0.1536,0.0307
+Guidance / Outlook,0.1222,0.4556,0.5556,0.7667,0.5667,0.3652,0.103
+Macro / Demand,-0.3,0.55,0.55,0.75,0.35,0.2128,0.2923
+Margins / Profitability,0.0,0.35,0.4,0.8,0.35,0.4126,0.2366
+Other,0.0,0.0,0.0,0.575,0.0,0.4217,0.0106
+Third-Party Seller Dynamics,0.6,0.0,0.2,0.9,0.5,0.344,0.0204

@@ -1,0 +1,45 @@
+{
+  "file": "AAPL_2025_5_1_earnings_call_qa.mp3",
+  "management_speaker": "SPEAKER_00",
+  "num_exchanges": 2,
+  "exchanges": [
+    {
+      "exchange_idx": 1,
+      "mgmt_start": 51.736,
+      "mgmt_end": 123.472,
+      "duration_sec": 71.736,
+      "word_count": 144,
+      "answer_text": "Well, on the data center side, we have a hybrid strategy. And so we utilize third parties in addition to the data center investments that we're making. And as I mentioned in the 500 billion, there's a number of states that we're expanding in. Some of those are data center investments. And so, we do plan on making investments in that area and we're not gating it. We invest in the business first, as Kevin talked about, is our most important thing to do. In terms of the foundation models, we want to have certain models. and we'll partner as well. And so I don't view it as a all of one or all of the other. We've been working on foundation models for quite some time and are shipping some today obviously with what's on device and what's in the private cloud compute.",
+      "pause_latency_sec": 0.928,
+      "speech_rate_wpm": 120.44,
+      "intra_pause_count": 25,
+      "intra_pause_mean_sec": 0.938,
+      "intra_pause_max_sec": 3.697,
+      "intra_pause_total_sec": 23.454,
+      "filler_count": 5,
+      "filler_rate_per_min": 4.18,
+      "mean_pitch_hz": 113.94,
+      "pitch_variance_hz": 27.9,
+      "mean_rms_energy": 0.055712
+    },
+    {
+      "exchange_idx": 3,
+      "mgmt_start": 143.89,
+      "mgmt_end": 174.721,
+      "duration_sec": 30.831,
+      "word_count": 57,
+      "answer_text": "We're super excited to ship the first one and get it out there and it's gone well. We love that we can produce better products from a point of view of really focusing on battery life and other things that customers want. And so we have started on a journey, is the way I would put it.",
+      "pause_latency_sec": 0.708,
+      "speech_rate_wpm": 110.93,
+      "intra_pause_count": 10,
+      "intra_pause_mean_sec": 1.052,
+      "intra_pause_max_sec": 1.861,
+      "intra_pause_total_sec": 10.525,
+      "filler_count": 2,
+      "filler_rate_per_min": 3.89,
+      "mean_pitch_hz": 109.11,
+      "pitch_variance_hz": 15.25,
+      "mean_rms_energy": 0.048995
+    }
+  ]
+}
