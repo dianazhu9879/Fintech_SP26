@@ -356,6 +356,7 @@
     const totalPages = Math.max(1, Math.ceil(rows.length / topicPageSize));
     topicPage = Math.min(topicPage, totalPages - 1);
     const pageRows = rows.slice(topicPage * topicPageSize, topicPage * topicPageSize + topicPageSize);
+    const fillerRows = Array.from({ length: Math.max(0, topicPageSize - pageRows.length) });
     return `
       <div class="topic-controls topic-controls-simple">
         <input class="topic-search" id="topicSearch" type="search" placeholder="Search topics..." aria-label="Search topics">
@@ -391,6 +392,16 @@
                 <td class="quality-text ${quality}">${quality}</td>
               </tr>
             `}).join('')}
+            ${fillerRows.map(() => `
+              <tr class="topic-placeholder-row" aria-hidden="true">
+                <td>&nbsp;</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            `).join('')}
           </tbody>
         </table>
       </div>
