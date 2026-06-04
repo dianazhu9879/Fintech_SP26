@@ -188,8 +188,8 @@
     ];
     const cell = (metrics, key, cls) => `
       <div class="tone-compare-cell">
-        <div class="tone-compare-track"><span class="${cls}" style="width:${metrics[key]}%"></span></div>
         <span class="mono">${metrics[key]}</span>
+        <div class="tone-compare-track"><span class="${cls}" style="width:${metrics[key]}%"></span></div>
       </div>
     `;
     return `

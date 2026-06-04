@@ -102,7 +102,9 @@
   }
 
   function render() {
-    statTickerCount.textContent = Object.values(window.TICKER_DATA).filter((ticker) => ticker.finalScore !== null && ticker.finalScore !== undefined).length;
+    if (statTickerCount) {
+      statTickerCount.textContent = Object.values(window.TICKER_DATA).filter((ticker) => ticker.finalScore !== null && ticker.finalScore !== undefined).length;
+    }
     renderTabs();
     renderList();
   }
