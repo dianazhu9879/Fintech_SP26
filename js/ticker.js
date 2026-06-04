@@ -35,7 +35,7 @@
 
   function setupNarrative(ticker) {
     const sectorCopy = {
-      'call-analysis': 'a large-cap technology company with call transcript coverage',
+      'call-analysis': 'a large-cap technology company',
       'software-cloud': 'a software, AI, or cloud infrastructure company',
       'semis-hardware': 'a semiconductor or hardware company',
       'consumer-retail': 'a consumer or retail company',
@@ -168,32 +168,33 @@
   function audioPanel(call) {
     const audio = call.audio;
     if (!audio.available) {
-      return `<div class="no-audio">${audio.source}. Transcript and topic data still appear where available.</div>`;
+      return `<div class="no-audio">${audio.source}. Text and topic signals still appear where available.</div>`;
     }
     const items = [
-      ['Confidence', audio.confidence, 'var(--color-bull)'],
-      ['Stress', audio.vocalStress, 'var(--color-warn)'],
-      ['Instability', audio.instability, 'var(--color-bear)'],
-      ['Pace', audio.paceControl, 'var(--color-info)'],
-      ['Clarity', audio.clarity, 'var(--color-accent)'],
+      ['Confidence', audio.confidence, 'fill-pos', 'Higher management confidence'],
+      ['Clarity', audio.clarity, 'fill-pos', 'Cleaner answer delivery'],
+      ['Pace control', audio.paceControl, 'fill-info', 'More controlled speaking pace'],
+      ['Vocal stress', audio.vocalStress, 'fill-warn', 'More stress in delivery'],
+      ['Instability', audio.instability, 'fill-neg', 'More variable delivery'],
     ];
+    const calmScore = Math.max(0, Math.min(100, Math.round(((audio.confidence || 0) + (audio.clarity || 0) + (audio.paceControl || 0) + (100 - (audio.vocalStress || 0)) + (100 - (audio.instability || 0))) / 5)));
     return `
-      <div class="audio-stack">
-        ${items.map(([label, value, color]) => {
-          const blocks = Array.from({ length: 12 }, (_, index) => {
-            const opacity = Math.max(0.18, Math.min(1, (value / 100) * (0.45 + index / 14)));
-            return `<span class="audio-block" style="background:${color}; opacity:${opacity.toFixed(2)}"></span>`;
-          }).join('');
-          return `
-            <div class="audio-row">
-              <div class="audio-key">${label}</div>
-              <div class="audio-seg">${blocks}</div>
-              <div class="audio-score">${value}</div>
-            </div>
-          `;
-        }).join('')}
+      <div class="audio-summary">
+        <div>
+          <div class="audio-big mono">${calmScore}</div>
+          <div class="audio-caption">delivery steadiness</div>
+        </div>
+        <div class="audio-source">${audio.segmentCount} Q&amp;A segments · ${audio.source}</div>
       </div>
-      <div class="audio-source">${audio.source} · ${audio.segmentCount} Q&amp;A segments</div>
+      <div class="audio-stack">
+        ${items.map(([label, value, cls, title]) => `
+          <div class="audio-row" title="${title}">
+            <div class="audio-key">${label}</div>
+            <div class="audio-meter"><span class="${cls}" style="width:${Math.max(0, Math.min(100, Number(value) || 0))}%"></span></div>
+            <div class="audio-score mono">${value}</div>
+          </div>
+        `).join('')}
+      </div>
     `;
   }
 
@@ -288,9 +289,7 @@
             return `<polyline points="${pts}" fill="none" stroke="${color}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></polyline>`;
           }).join('')}
           ${series.map(([label, key]) => chartRows.map((row, index) => `
-            <circle cx="${xFor(index)}" cy="${yFor(row[key] ?? 0)}" r="7" class="chart-hover-point">
-              <title>${row.quarter || row.reportDate} · ${label}: ${fmtPct(row[key])}</title>
-            </circle>
+            <circle cx="${xFor(index)}" cy="${yFor(row[key] ?? 0)}" r="7" class="chart-hover-point" data-chart-tip="${row.quarter || row.reportDate} · ${label}: ${fmtPct(row[key])}"></circle>
           `).join('')).join('')}
           ${chartRows.map((row, index) => `<text x="${xFor(index)}" y="${height - 14}" text-anchor="middle" class="chart-label">${row.quarter || row.reportDate}</text>`).join('')}
         </svg>
@@ -325,17 +324,13 @@
             const x = xFor(index) - 9;
             const y = Math.min(yRet(row.excessReturn5d || 0), zeroY);
             const h = Math.abs(yRet(row.excessReturn5d || 0) - zeroY);
-            return `<rect x="${x}" y="${y}" width="18" height="${Math.max(2, h)}" rx="2" fill="${(row.excessReturn5d || 0) >= 0 ? 'rgba(166,214,180,0.55)' : 'rgba(230,164,164,0.55)'}"><title>${row.quarter} · 5D excess return: ${fmtPct(row.excessReturn5d)}</title></rect>`;
+            return `<rect x="${x}" y="${y}" width="18" height="${Math.max(2, h)}" rx="2" fill="${(row.excessReturn5d || 0) >= 0 ? 'rgba(166,214,180,0.55)' : 'rgba(230,164,164,0.55)'}" data-chart-tip="${row.quarter} · 5D excess return: ${fmtPct(row.excessReturn5d)}"></rect>`;
           }).join('')}
           <polyline points="${sentimentPts}" class="chart-line"></polyline>
           <polyline points="${riskPts}" fill="none" stroke="rgba(210,162,86,0.76)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></polyline>
           ${rows.map((row, index) => `
-            <circle cx="${xFor(index)}" cy="${yScore(row.sentiment)}" r="7" class="chart-hover-point">
-              <title>${row.quarter} · sentiment: ${row.sentiment}/100</title>
-            </circle>
-            <circle cx="${xFor(index)}" cy="${yScore(row.risk)}" r="7" class="chart-hover-point">
-              <title>${row.quarter} · risk: ${row.risk}/100</title>
-            </circle>
+            <circle cx="${xFor(index)}" cy="${yScore(row.sentiment)}" r="7" class="chart-hover-point" data-chart-tip="${row.quarter} · sentiment: ${row.sentiment}/100"></circle>
+            <circle cx="${xFor(index)}" cy="${yScore(row.risk)}" r="7" class="chart-hover-point" data-chart-tip="${row.quarter} · risk: ${row.risk}/100"></circle>
           `).join('')}
           ${rows.map((row, index) => `<text x="${xFor(index)}" y="${height - 14}" text-anchor="middle" class="chart-label">${row.quarter.replace('_20', '’')}</text>`).join('')}
         </svg>
@@ -596,7 +591,7 @@
         </section>
 
         ${call ? `
-          <section class="panel span-12 tone-emphasis-panel">
+          <section class="panel span-8 tone-emphasis-panel">
             <div class="panel-header">
               <div>${panelTitle('Prepared vs Q&amp;A', 'text')}<div class="panel-sub">Sentiment, risk, pressure, defensiveness</div></div>
               ${sourceBadge('FinBERT + LLM', 'text')}
@@ -605,6 +600,14 @@
               <div><div class="subhead">Prepared remarks</div>${meterRows(call.prepared)}</div>
               <div><div class="subhead">Analyst Q&amp;A</div>${meterRows(call.qa)}</div>
             </div>
+          </section>
+
+          <section class="panel span-4 audio-panel">
+            <div class="panel-header">
+              <div>${panelTitle('Audio Features', 'audio')}<div class="panel-sub">Q&amp;A delivery steadiness and stress markers</div></div>
+              ${sourceBadge(call.audio?.available ? 'audio' : 'placeholder', 'audio')}
+            </div>
+            ${audioPanel(call)}
           </section>
 
           <section class="panel span-7">
@@ -659,6 +662,7 @@
         ` : ''}
       </div>
       ${transcriptModal()}
+      <div class="chart-tooltip" id="chartTooltip" hidden></div>
     `;
   }
 
@@ -699,6 +703,27 @@
         if (modal) modal.hidden = true;
       });
     });
+
+    const chartTooltip = document.getElementById('chartTooltip');
+    document.querySelectorAll('[data-chart-tip]').forEach((mark) => {
+      mark.addEventListener('mouseenter', (event) => {
+        if (!chartTooltip) return;
+        chartTooltip.textContent = mark.dataset.chartTip;
+        chartTooltip.hidden = false;
+        positionChartTooltip(event, chartTooltip);
+      });
+      mark.addEventListener('mousemove', (event) => {
+        if (chartTooltip && !chartTooltip.hidden) positionChartTooltip(event, chartTooltip);
+      });
+      mark.addEventListener('mouseleave', () => {
+        if (chartTooltip) chartTooltip.hidden = true;
+      });
+    });
+  }
+
+  function positionChartTooltip(event, tooltip) {
+    tooltip.style.left = `${event.clientX + 12}px`;
+    tooltip.style.top = `${event.clientY - 12}px`;
   }
 
   window.addEventListener('popstate', () => renderDashboard(activeSymbol()));
