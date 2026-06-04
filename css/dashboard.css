@@ -603,19 +603,21 @@
 }
 
 .mini-stat-grid {
-  height: calc(100% - 4px);
+  height: auto;
+  gap: 6px;
 }
 
 .mini-stat {
-  min-height: 88px;
+  min-height: 58px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 5px;
+  gap: 3px;
+  padding: 7px 9px;
 }
 
 .mini-stat-bar {
-  height: 5px;
+  height: 4px;
   border-radius: 999px;
   background: rgba(255,255,255,0.08);
   overflow: hidden;
