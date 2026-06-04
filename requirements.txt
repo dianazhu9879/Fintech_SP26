@@ -1,3 +1,10 @@
+pandas
+numpy
+librosa
+soundfile
+scikit-learn
+tqdm
+pytest
 # audio_scraper.py
 requests
 beautifulsoup4
