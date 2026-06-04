@@ -1,0 +1,16 @@
+primary_topic,sentiment_score,risk_intensity_score,uncertainty_score,confidence_score,guidance_strength_score,finbert_positive,finbert_negative
+AI Factory Deployments,0.7667,0.04,0.1467,0.9,0.72,0.1793,0.0263
+Blackwell Architecture,0.3655,0.1483,0.3207,0.8138,0.4172,0.2224,0.0282
+Capital Allocation,0.3667,0.1333,0.2833,0.8,0.3333,0.2502,0.0143
+Data Center Revenue,0.3903,0.1645,0.3355,0.8065,0.4968,0.2806,0.0531
+Enterprise AI Adoption,0.7,0.1,0.2,0.8667,0.7667,0.1376,0.0218
+Generative AI Applications,0.6,0.0727,0.2273,0.8545,0.4909,0.1595,0.0272
+Guidance / Outlook,0.0,0.15,0.45,0.8,0.45,0.1729,0.0221
+Hopper Architecture,0.425,0.15,0.35,0.8,0.425,0.1937,0.0264
+Inference Performance,0.45,0.025,0.2875,0.8125,0.3,0.139,0.0189
+Macro / Demand,0.12,0.18,0.42,0.75,0.41,0.2389,0.0276
+Margins / Profitability,0.0667,0.3,0.4889,0.7444,0.4778,0.1728,0.027
+Networking Solutions,0.6375,0.025,0.1875,0.825,0.3125,0.2823,0.1212
+Other,0.0,0.0,0.0769,0.8923,0.0,0.0343,0.0269
+Regulation / Geopolitics,-0.36,0.24,0.58,0.76,0.14,0.1623,0.0298
+Sovereign AI Initiatives,0.2667,0.1667,0.3667,0.7667,0.2333,0.2709,0.0474

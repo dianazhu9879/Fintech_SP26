@@ -1,0 +1,10 @@
+primary_topic,sentiment_score,risk_intensity_score,uncertainty_score,confidence_score,guidance_strength_score,finbert_positive,finbert_negative
+AI Integration and Development,0.4367,0.1833,0.31,0.8333,0.53,0.1763,0.0458
+Azure Data Center Expansion,-0.0667,0.15,0.4333,0.8,0.2333,0.1738,0.1302
+Capital Allocation,0.225,0.275,0.375,0.775,0.55,0.2805,0.0152
+Guidance / Outlook,0.16,0.24,0.38,0.8,0.36,0.0643,0.0455
+Macro / Demand,0.2,0.3,0.4,0.85,0.5,0.2025,0.0684
+Margins / Profitability,0.5,0.075,0.2,0.825,0.475,0.3424,0.0222
+Microsoft 365 Copilot Adoption,0.5857,0.0429,0.2,0.8571,0.5286,0.1009,0.0317
+Microsoft Cloud Growth,0.52,0.1867,0.28,0.84,0.5767,0.3161,0.0802
+Other,0.2308,0.0,0.0,0.7923,0.0,0.2761,0.0215

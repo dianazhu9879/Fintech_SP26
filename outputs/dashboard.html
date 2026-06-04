@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Earnings Call Sentiment Dashboard</title>
+<script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #111; color: #e5e7eb; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+  header { background: #1a1a1a; border-bottom: 1px solid #2a2a2a; padding: 24px 40px; }
+  header h1 { font-size: 1.5rem; font-weight: 700; letter-spacing: -0.02em; }
+  header p { color: #9ca3af; font-size: 0.9rem; margin-top: 4px; }
+  .stats { display: flex; gap: 16px; padding: 24px 40px; }
+  .stat-card { background: #1a1a1a; border: 1px solid #2a2a2a; border-radius: 10px;
+                padding: 20px 28px; flex: 1; }
+  .stat-card .value { font-size: 2rem; font-weight: 700; line-height: 1; }
+  .stat-card .label { font-size: 0.78rem; color: #9ca3af; margin-top: 6px; text-transform: uppercase;
+                       letter-spacing: 0.06em; }
+  .stat-card .green { color: #4ade80; }
+  .stat-card .red { color: #f87171; }
+  .stat-card .yellow { color: #facc15; }
+  .stat-card .blue { color: #60a5fa; }
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; padding: 0 40px 16px; }
+  .grid-1 { padding: 0 40px 16px; }
+  .chart-card { background: #1a1a1a; border: 1px solid #2a2a2a; border-radius: 10px;
+                 padding: 16px; }
+  .chart-card h2 { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.06em;
+                    color: #6b7280; margin-bottom: 8px; }
+  .caveat { margin: 0 40px 40px; background: #1a1a1a; border: 1px solid #2a2a2a;
+             border-radius: 10px; padding: 20px 28px; }
+  .caveat h3 { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.06em;
+                color: #6b7280; margin-bottom: 10px; }
+  .caveat ul { color: #9ca3af; font-size: 0.85rem; line-height: 1.8; padding-left: 20px; }
+  .section-label { padding: 8px 40px 4px; font-size: 0.7rem; text-transform: uppercase;
+                    letter-spacing: 0.08em; color: #4b5563; }
+  .findings { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px;
+               padding: 0 40px 16px; }
+  .finding { background: #1a1a1a; border: 1px solid #2a2a2a; border-radius: 10px;
+              padding: 16px 20px; }
+  .finding .emoji { font-size: 1.4rem; margin-bottom: 8px; }
+  .finding h4 { font-size: 0.9rem; font-weight: 600; margin-bottom: 6px; }
+  .finding p { font-size: 0.82rem; color: #9ca3af; line-height: 1.6; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Earnings Call Sentiment &amp; Stock Returns</h1>
+  <p>LLM topic labeling + FinBERT · gpt-4o-mini · 7 large-cap tech companies · 2024–2026</p>
+</header>
+
+<!-- Stat cards -->
+<div class="stats">
+  <div class="stat-card">
+    <div class="value blue">37</div>
+    <div class="label">Earnings events</div>
+  </div>
+  <div class="stat-card">
+    <div class="value blue">7</div>
+    <div class="label">Companies</div>
+  </div>
+  <div class="stat-card">
+    <div class="value blue">57</div>
+    <div class="label">Unique topics discovered</div>
+  </div>
+  <div class="stat-card">
+    <div class="value blue">6</div>
+    <div class="label">Return horizons (1–21 days)</div>
+  </div>
+  <div class="stat-card">
+    <div class="value red">-0.31</div>
+    <div class="label">Strongest signal: risk intensity → 21d return</div>
+  </div>
+</div>
+
+<!-- Key findings -->
+<div class="section-label">Key findings</div>
+<div class="findings">
+  <div class="finding">
+    <div class="emoji">📉</div>
+    <h4>Risk language predicts weakness</h4>
+    <p>Higher risk-intensity talk in earnings calls reliably predicts below-benchmark returns at 10–21 days (ρ = −0.31). The strongest and most consistent whole-call signal.</p>
+  </div>
+  <div class="finding">
+    <div class="emoji">⏱️</div>
+    <h4>Sentiment effect is delayed</h4>
+    <p>Overall sentiment correlation is near zero at 1–3 days, then strengthens to ρ ≈ +0.13 at 10–21 days. Markets re-process qualitative content slowly.</p>
+  </div>
+  <div class="finding">
+    <div class="emoji">🎯</div>
+    <h4>GOOGL is the most efficient</h4>
+    <p>Google's earnings call sentiment correlates with subsequent returns at every horizon (ρ = 0.96 at 1d, 0.85 at 5d) — the most information-rich calls in this panel.</p>
+  </div>
+  <div class="finding">
+    <div class="emoji">🤖</div>
+    <h4>Specific AI beats broad AI</h4>
+    <p>Sentiment about concrete AI products (AI Infrastructure ρ = +0.85, Advertising ρ = +0.78) predicts positive returns. Vague "AI Initiatives" talk predicts negative (ρ = −0.99).</p>
+  </div>
+  <div class="finding">
+    <div class="emoji">🍎</div>
+    <h4>AAPL is the outlier</h4>
+    <p>Apple shows a consistent inverse signal (ρ = −0.77 at 5d). Likely pre-priced before calls — earnings sentiment has little incremental value for Apple.</p>
+  </div>
+  <div class="finding">
+    <div class="emoji">⚠️</div>
+    <h4>Small sample — indicative only</h4>
+    <p>4–7 events per ticker is too few for statistical conclusions. All per-company and per-topic results should be treated as hypothesis-generating, not definitive.</p>
+  </div>
+</div>
+
+<!-- Chart row 1 -->
+<div class="section-label">Whole-call signals</div>
+<div class="grid-2">
+  <div class="chart-card">
+    <div id="chart-signals" style="height:340px;"></div>
+  </div>
+  <div class="chart-card">
+    <div id="chart-risk" style="height:340px;"></div>
+  </div>
+</div>
+
+<!-- Chart row 2 -->
+<div class="section-label">Company-level correlations</div>
+<div class="grid-1">
+  <div class="chart-card">
+    <div id="chart-heatmap" style="height:320px;"></div>
+  </div>
+</div>
+
+<!-- Chart row 3 -->
+<div class="section-label">Topic-level signals (5-day horizon)</div>
+<div class="grid-1">
+  <div class="chart-card">
+    <div id="chart-topics" style="height:420px;"></div>
+  </div>
+</div>
+
+<!-- Chart row 4 -->
+<div class="section-label">Per-event detail</div>
+<div class="grid-1">
+  <div class="chart-card">
+    <div id="chart-scatter" style="height:400px;"></div>
+  </div>
+</div>
+
+<!-- Caveats -->
+<div class="caveat">
+  <h3>Caveats &amp; limitations</h3>
+  <ul>
+    <li>All correlations are Pearson — non-linear effects won't show up.</li>
+    <li>Each event is treated as independent; no adjustment for sector or time clustering.</li>
+    <li>Per-company: n = 4–7 events each. Per-topic: most flagged <em>indicative only</em> (n &lt; 6).</li>
+    <li>The 21-day horizon overlaps with non-earnings news; treat as context, not causal.</li>
+    <li>LLM and FinBERT make systematic errors on sarcasm, hedging, and forward-looking language.</li>
+    <li>Excess returns computed vs per-ticker sector ETFs (SOXX for semis, QQQ otherwise).</li>
+  </ul>
+</div>
+
+<script>
+const cfg = {responsive: true, displayModeBar: false};
+
+Plotly.newPlot('chart-signals', {"data": [{"type": "scatter", "mode": "lines+markers", "name": "Sentiment", "x": [1, 3, 5, 7, 10, 21], "y": [-0.01, -0.072, 0.043, 0.113, 0.131, 0.129], "line": {"color": "#4ade80", "width": 2.5}, "marker": {"size": 7}}, {"type": "scatter", "mode": "lines+markers", "name": "Risk Intensity", "x": [1, 3, 5, 7, 10, 21], "y": [0.09, 0.04, -0.041, -0.057, -0.164, -0.307], "line": {"color": "#f87171", "width": 2.5}, "marker": {"size": 7}}, {"type": "scatter", "mode": "lines+markers", "name": "Uncertainty", "x": [1, 3, 5, 7, 10, 21], "y": [0.162, 0.18, 0.062, 0.011, -0.03, -0.203], "line": {"color": "#facc15", "width": 2.5}, "marker": {"size": 7}}, {"type": "scatter", "mode": "lines+markers", "name": "% Negative/Mixed Turns", "x": [1, 3, 5, 7, 10, 21], "y": [-0.057, 0.001, 0.009, -0.061, -0.04, -0.129], "line": {"color": "#c084fc", "width": 2.5}, "marker": {"size": 7}}], "layout": {"title": {"text": "Whole-Call Tone vs Excess Return (Pearson \u03c1)", "font": {"size": 15}}, "xaxis": {"title": "Trading-day horizon", "tickvals": [1, 3, 5, 7, 10, 21], "ticktext": ["1d", "3d", "5d", "7d", "10d", "21d"], "gridcolor": "#2a2a2a"}, "yaxis": {"title": "\u03c1", "zeroline": true, "zerolinecolor": "#555", "gridcolor": "#2a2a2a", "range": [-0.45, 0.45]}, "legend": {"bgcolor": "rgba(0,0,0,0)"}, "plot_bgcolor": "#1a1a1a", "paper_bgcolor": "#1a1a1a", "font": {"color": "#e5e7eb"}, "margin": {"t": 50, "b": 50, "l": 60, "r": 20}, "shapes": [{"type": "line", "x0": 1, "x1": 21, "y0": 0, "y1": 0, "line": {"color": "#555", "dash": "dot"}}]}}.data, {"data": [{"type": "scatter", "mode": "lines+markers", "name": "Sentiment", "x": [1, 3, 5, 7, 10, 21], "y": [-0.01, -0.072, 0.043, 0.113, 0.131, 0.129], "line": {"color": "#4ade80", "width": 2.5}, "marker": {"size": 7}}, {"type": "scatter", "mode": "lines+markers", "name": "Risk Intensity", "x": [1, 3, 5, 7, 10, 21], "y": [0.09, 0.04, -0.041, -0.057, -0.164, -0.307], "line": {"color": "#f87171", "width": 2.5}, "marker": {"size": 7}}, {"type": "scatter", "mode": "lines+markers", "name": "Uncertainty", "x": [1, 3, 5, 7, 10, 21], "y": [0.162, 0.18, 0.062, 0.011, -0.03, -0.203], "line": {"color": "#facc15", "width": 2.5}, "marker": {"size": 7}}, {"type": "scatter", "mode": "lines+markers", "name": "% Negative/Mixed Turns", "x": [1, 3, 5, 7, 10, 21], "y": [-0.057, 0.001, 0.009, -0.061, -0.04, -0.129], "line": {"color": "#c084fc", "width": 2.5}, "marker": {"size": 7}}], "layout": {"title": {"text": "Whole-Call Tone vs Excess Return (Pearson \u03c1)", "font": {"size": 15}}, "xaxis": {"title": "Trading-day horizon", "tickvals": [1, 3, 5, 7, 10, 21], "ticktext": ["1d", "3d", "5d", "7d", "10d", "21d"], "gridcolor": "#2a2a2a"}, "yaxis": {"title": "\u03c1", "zeroline": true, "zerolinecolor": "#555", "gridcolor": "#2a2a2a", "range": [-0.45, 0.45]}, "legend": {"bgcolor": "rgba(0,0,0,0)"}, "plot_bgcolor": "#1a1a1a", "paper_bgcolor": "#1a1a1a", "font": {"color": "#e5e7eb"}, "margin": {"t": 50, "b": 50, "l": 60, "r": 20}, "shapes": [{"type": "line", "x0": 1, "x1": 21, "y0": 0, "y1": 0, "line": {"color": "#555", "dash": "dot"}}]}}.layout, cfg);
+Plotly.newPlot('chart-risk',    {"data": [{"type": "scatter", "mode": "markers", "name": "NVDA", "x": [0.167, 0.12, 0.168, 0.078, 0.158, 0.083, 0.1], "y": [0.66, -7.35, -0.76, -0.9, -5.77, -11.8, -0.11], "marker": {"color": "#76b900", "size": 9, "opacity": 0.85, "line": {"width": 1, "color": "#fff"}}}, {"type": "scatter", "mode": "markers", "name": "AAPL", "x": [0.148, 0.14, 0.183, 0.14, 0.141], "y": [2.94, 5.2, 11.52, 7.08, 5.0], "marker": {"color": "#a2aaad", "size": 9, "opacity": 0.85, "line": {"width": 1, "color": "#fff"}}}, {"type": "scatter", "mode": "markers", "name": "MSFT", "x": [0.139, 0.131, 0.11, 0.213, 0.161], "y": [-0.22, -1.23, -5.82, -5.83, -4.46], "marker": {"color": "#00a4ef", "size": 9, "opacity": 0.85, "line": {"width": 1, "color": "#fff"}}}, {"type": "scatter", "mode": "markers", "name": "GOOGL", "x": [0.158, 0.157, 0.127, 0.152], "y": [-2.48, 6.01, 13.29, -9.25], "marker": {"color": "#fbbc04", "size": 9, "opacity": 0.85, "line": {"width": 1, "color": "#fff"}}}, {"type": "scatter", "mode": "markers", "name": "META", "x": [0.222, 0.244, 0.167, 0.156, 0.23], "y": [-2.05, 0.32, -2.42, -8.09, -17.57], "marker": {"color": "#0082fb", "size": 9, "opacity": 0.85, "line": {"width": 1, "color": "#fff"}}}, {"type": "scatter", "mode": "markers", "name": "AMZN", "x": [0.206, 0.232, 0.229, 0.182, 0.225], "y": [-8.36, 2.06, -4.39, -2.89, 2.21], "marker": {"color": "#ff9900", "size": 9, "opacity": 0.85, "line": {"width": 1, "color": "#fff"}}}, {"type": "scatter", "mode": "markers", "name": "TSLA", "x": [0.142, 0.099, 0.236, 0.165, 0.152, 0.151], "y": [0.8, 32.61, -23.92, 10.14, -9.53, 0.21], "marker": {"color": "#cc0000", "size": 9, "opacity": 0.85, "line": {"width": 1, "color": "#fff"}}}], "layout": {"title": {"text": "Risk Intensity vs 21-Day Excess Return  (\u03c1 = \u22120.31, n=37)", "font": {"size": 15}}, "xaxis": {"title": "Avg Risk Intensity Score", "gridcolor": "#2a2a2a"}, "yaxis": {"title": "21-Day Excess Return (%)", "gridcolor": "#2a2a2a", "zeroline": true, "zerolinecolor": "#555"}, "plot_bgcolor": "#1a1a1a", "paper_bgcolor": "#1a1a1a", "font": {"color": "#e5e7eb"}, "legend": {"bgcolor": "rgba(0,0,0,0)"}, "margin": {"t": 60, "b": 60, "l": 70, "r": 20}}}.data,    {"data": [{"type": "scatter", "mode": "markers", "name": "NVDA", "x": [0.167, 0.12, 0.168, 0.078, 0.158, 0.083, 0.1], "y": [0.66, -7.35, -0.76, -0.9, -5.77, -11.8, -0.11], "marker": {"color": "#76b900", "size": 9, "opacity": 0.85, "line": {"width": 1, "color": "#fff"}}}, {"type": "scatter", "mode": "markers", "name": "AAPL", "x": [0.148, 0.14, 0.183, 0.14, 0.141], "y": [2.94, 5.2, 11.52, 7.08, 5.0], "marker": {"color": "#a2aaad", "size": 9, "opacity": 0.85, "line": {"width": 1, "color": "#fff"}}}, {"type": "scatter", "mode": "markers", "name": "MSFT", "x": [0.139, 0.131, 0.11, 0.213, 0.161], "y": [-0.22, -1.23, -5.82, -5.83, -4.46], "marker": {"color": "#00a4ef", "size": 9, "opacity": 0.85, "line": {"width": 1, "color": "#fff"}}}, {"type": "scatter", "mode": "markers", "name": "GOOGL", "x": [0.158, 0.157, 0.127, 0.152], "y": [-2.48, 6.01, 13.29, -9.25], "marker": {"color": "#fbbc04", "size": 9, "opacity": 0.85, "line": {"width": 1, "color": "#fff"}}}, {"type": "scatter", "mode": "markers", "name": "META", "x": [0.222, 0.244, 0.167, 0.156, 0.23], "y": [-2.05, 0.32, -2.42, -8.09, -17.57], "marker": {"color": "#0082fb", "size": 9, "opacity": 0.85, "line": {"width": 1, "color": "#fff"}}}, {"type": "scatter", "mode": "markers", "name": "AMZN", "x": [0.206, 0.232, 0.229, 0.182, 0.225], "y": [-8.36, 2.06, -4.39, -2.89, 2.21], "marker": {"color": "#ff9900", "size": 9, "opacity": 0.85, "line": {"width": 1, "color": "#fff"}}}, {"type": "scatter", "mode": "markers", "name": "TSLA", "x": [0.142, 0.099, 0.236, 0.165, 0.152, 0.151], "y": [0.8, 32.61, -23.92, 10.14, -9.53, 0.21], "marker": {"color": "#cc0000", "size": 9, "opacity": 0.85, "line": {"width": 1, "color": "#fff"}}}], "layout": {"title": {"text": "Risk Intensity vs 21-Day Excess Return  (\u03c1 = \u22120.31, n=37)", "font": {"size": 15}}, "xaxis": {"title": "Avg Risk Intensity Score", "gridcolor": "#2a2a2a"}, "yaxis": {"title": "21-Day Excess Return (%)", "gridcolor": "#2a2a2a", "zeroline": true, "zerolinecolor": "#555"}, "plot_bgcolor": "#1a1a1a", "paper_bgcolor": "#1a1a1a", "font": {"color": "#e5e7eb"}, "legend": {"bgcolor": "rgba(0,0,0,0)"}, "margin": {"t": 60, "b": 60, "l": 70, "r": 20}}}.layout,    cfg);
+Plotly.newPlot('chart-heatmap', {"data": [{"type": "heatmap", "z": [[-0.08, 0.05, 0.17, 0.3, 0.39, 0.05], [-0.09, -0.4, -0.77, -0.77, -0.89, -0.83], [0.44, 0.49, 0.35, 0.1, -0.8, 0.04], [0.96, 0.98, 0.85, 0.91, 0.87, 0.86], [0.23, 0.24, 0.82, 0.69, 0.72, 0.63], [0.55, 0.27, 0.43, 0.71, 0.28, -0.3], [-0.09, 0.14, 0.3, 0.37, 0.61, 0.56]], "x": ["1d", "3d", "5d", "7d", "10d", "21d"], "y": ["NVDA", "AAPL", "MSFT", "GOOGL", "META", "AMZN", "TSLA"], "text": [["-0.08", "0.05", "0.17", "0.30", "0.39", "0.05"], ["-0.09", "-0.40", "-0.77", "-0.77", "-0.89", "-0.83"], ["0.44", "0.49", "0.35", "0.10", "-0.80", "0.04"], ["0.96", "0.98", "0.85", "0.91", "0.87", "0.86"], ["0.23", "0.24", "0.82", "0.69", "0.72", "0.63"], ["0.55", "0.27", "0.43", "0.71", "0.28", "-0.30"], ["-0.09", "0.14", "0.30", "0.37", "0.61", "0.56"]], "texttemplate": "%{text}", "colorscale": [[0.0, "#b91c1c"], [0.35, "#ef4444"], [0.47, "#1a1a1a"], [0.53, "#1a1a1a"], [0.65, "#22c55e"], [1.0, "#15803d"]], "zmid": 0, "zmin": -1, "zmax": 1, "showscale": true, "colorbar": {"title": "\u03c1", "tickfont": {"color": "#e5e7eb"}, "titlefont": {"color": "#e5e7eb"}}}], "layout": {"title": {"text": "Sentiment \u2192 Excess Return Correlation by Company & Horizon", "font": {"size": 15}}, "xaxis": {"title": "Horizon", "gridcolor": "#2a2a2a"}, "yaxis": {"title": "", "gridcolor": "#2a2a2a"}, "plot_bgcolor": "#1a1a1a", "paper_bgcolor": "#1a1a1a", "font": {"color": "#e5e7eb"}, "margin": {"t": 60, "b": 50, "l": 70, "r": 20}}}.data, {"data": [{"type": "heatmap", "z": [[-0.08, 0.05, 0.17, 0.3, 0.39, 0.05], [-0.09, -0.4, -0.77, -0.77, -0.89, -0.83], [0.44, 0.49, 0.35, 0.1, -0.8, 0.04], [0.96, 0.98, 0.85, 0.91, 0.87, 0.86], [0.23, 0.24, 0.82, 0.69, 0.72, 0.63], [0.55, 0.27, 0.43, 0.71, 0.28, -0.3], [-0.09, 0.14, 0.3, 0.37, 0.61, 0.56]], "x": ["1d", "3d", "5d", "7d", "10d", "21d"], "y": ["NVDA", "AAPL", "MSFT", "GOOGL", "META", "AMZN", "TSLA"], "text": [["-0.08", "0.05", "0.17", "0.30", "0.39", "0.05"], ["-0.09", "-0.40", "-0.77", "-0.77", "-0.89", "-0.83"], ["0.44", "0.49", "0.35", "0.10", "-0.80", "0.04"], ["0.96", "0.98", "0.85", "0.91", "0.87", "0.86"], ["0.23", "0.24", "0.82", "0.69", "0.72", "0.63"], ["0.55", "0.27", "0.43", "0.71", "0.28", "-0.30"], ["-0.09", "0.14", "0.30", "0.37", "0.61", "0.56"]], "texttemplate": "%{text}", "colorscale": [[0.0, "#b91c1c"], [0.35, "#ef4444"], [0.47, "#1a1a1a"], [0.53, "#1a1a1a"], [0.65, "#22c55e"], [1.0, "#15803d"]], "zmid": 0, "zmin": -1, "zmax": 1, "showscale": true, "colorbar": {"title": "\u03c1", "tickfont": {"color": "#e5e7eb"}, "titlefont": {"color": "#e5e7eb"}}}], "layout": {"title": {"text": "Sentiment \u2192 Excess Return Correlation by Company & Horizon", "font": {"size": 15}}, "xaxis": {"title": "Horizon", "gridcolor": "#2a2a2a"}, "yaxis": {"title": "", "gridcolor": "#2a2a2a"}, "plot_bgcolor": "#1a1a1a", "paper_bgcolor": "#1a1a1a", "font": {"color": "#e5e7eb"}, "margin": {"t": 60, "b": 50, "l": 70, "r": 20}}}.layout, cfg);
+Plotly.newPlot('chart-topics',  {"data": [{"type": "bar", "orientation": "h", "name": "Negative signal", "x": [-0.999, -0.986, -0.961, -0.855, -0.754, -0.739, -0.637, -0.628], "y": ["User Growth Metrics", "AI and Machine Learning in Prod\u2026", "Azure Data Center Expansion", "Cost Management and Efficiency \u2026", "Microsoft 365 Copilot Adoption", "Consumer Electronics Trends", "Search Innovations", "Apple Intelligence"], "marker": {"color": "#ef4444"}, "text": ["n=4", "n=5", "n=3", "n=3", "n=4", "n=3", "n=4", "n=5"], "textposition": "outside"}, {"type": "bar", "orientation": "h", "name": "Positive signal", "x": [1.0, 0.999, 0.853, 0.778, 0.764, 0.697, 0.687, 0.65], "y": ["4680 Battery Cell Production", "Google Cloud Expansion", "AI Infrastructure", "Advertising Performance", "Cost Management and Efficiency", "iPhone Lineup", "YouTube Growth", "Regulatory Challenges"], "marker": {"color": "#4ade80"}, "text": ["n=3", "n=3", "n=4", "n=5", "n=4", "n=5", "n=4", "n=5"], "textposition": "outside", "xaxis": "x2", "yaxis": "y2"}], "layout": {"title": {"text": "Top Topics by Sentiment \u2192 Return Correlation (5-day horizon, n \u2265 3)", "font": {"size": 15}}, "grid": {"rows": 1, "columns": 2, "pattern": "independent"}, "xaxis": {"title": "\u03c1", "domain": [0, 0.48], "gridcolor": "#2a2a2a", "range": [-1.15, 0]}, "yaxis": {"domain": [0, 1], "gridcolor": "#2a2a2a"}, "xaxis2": {"title": "\u03c1", "domain": [0.52, 1], "gridcolor": "#2a2a2a", "range": [0, 1.15]}, "yaxis2": {"domain": [0, 1], "gridcolor": "#2a2a2a"}, "plot_bgcolor": "#1a1a1a", "paper_bgcolor": "#1a1a1a", "font": {"color": "#e5e7eb"}, "margin": {"t": 60, "b": 50, "l": 220, "r": 220}, "showlegend": false, "shapes": [{"type": "line", "x0": 0, "x1": 0, "y0": 0, "y1": 1, "xref": "x", "yref": "paper", "line": {"color": "#555", "dash": "dot"}}, {"type": "line", "x0": 0, "x1": 0, "y0": 0, "y1": 1, "xref": "x2", "yref": "paper", "line": {"color": "#555", "dash": "dot"}}]}}.data,  {"data": [{"type": "bar", "orientation": "h", "name": "Negative signal", "x": [-0.999, -0.986, -0.961, -0.855, -0.754, -0.739, -0.637, -0.628], "y": ["User Growth Metrics", "AI and Machine Learning in Prod\u2026", "Azure Data Center Expansion", "Cost Management and Efficiency \u2026", "Microsoft 365 Copilot Adoption", "Consumer Electronics Trends", "Search Innovations", "Apple Intelligence"], "marker": {"color": "#ef4444"}, "text": ["n=4", "n=5", "n=3", "n=3", "n=4", "n=3", "n=4", "n=5"], "textposition": "outside"}, {"type": "bar", "orientation": "h", "name": "Positive signal", "x": [1.0, 0.999, 0.853, 0.778, 0.764, 0.697, 0.687, 0.65], "y": ["4680 Battery Cell Production", "Google Cloud Expansion", "AI Infrastructure", "Advertising Performance", "Cost Management and Efficiency", "iPhone Lineup", "YouTube Growth", "Regulatory Challenges"], "marker": {"color": "#4ade80"}, "text": ["n=3", "n=3", "n=4", "n=5", "n=4", "n=5", "n=4", "n=5"], "textposition": "outside", "xaxis": "x2", "yaxis": "y2"}], "layout": {"title": {"text": "Top Topics by Sentiment \u2192 Return Correlation (5-day horizon, n \u2265 3)", "font": {"size": 15}}, "grid": {"rows": 1, "columns": 2, "pattern": "independent"}, "xaxis": {"title": "\u03c1", "domain": [0, 0.48], "gridcolor": "#2a2a2a", "range": [-1.15, 0]}, "yaxis": {"domain": [0, 1], "gridcolor": "#2a2a2a"}, "xaxis2": {"title": "\u03c1", "domain": [0.52, 1], "gridcolor": "#2a2a2a", "range": [0, 1.15]}, "yaxis2": {"domain": [0, 1], "gridcolor": "#2a2a2a"}, "plot_bgcolor": "#1a1a1a", "paper_bgcolor": "#1a1a1a", "font": {"color": "#e5e7eb"}, "margin": {"t": 60, "b": 50, "l": 220, "r": 220}, "showlegend": false, "shapes": [{"type": "line", "x0": 0, "x1": 0, "y0": 0, "y1": 1, "xref": "x", "yref": "paper", "line": {"color": "#555", "dash": "dot"}}, {"type": "line", "x0": 0, "x1": 0, "y0": 0, "y1": 1, "xref": "x2", "yref": "paper", "line": {"color": "#555", "dash": "dot"}}]}}.layout,  cfg);
+Plotly.newPlot('chart-scatter', {"data": [{"type": "scatter", "mode": "markers+text", "name": "NVDA", "x": [0.194, 0.419, 0.368, 0.328, 0.365, 0.364, 0.428], "y": [-2.68, -3.09, -5.12, -5.43, -12.7, -4.46, 4.5], "text": ["Q1_2026", "Q2_2025", "Q2_2026", "Q3_2025", "Q3_2026", "Q4_2025", "Q4_2026"], "textposition": "top center", "textfont": {"size": 9}, "marker": {"color": "#76b900", "size": 10, "opacity": 0.85, "line": {"width": 1, "color": "#fff"}}}, {"type": "scatter", "mode": "markers+text", "name": "AAPL", "x": [0.336, 0.28, 0.202, 0.293, 0.271], "y": [-3.67, 9.15, 9.59, -3.55, 2.37], "text": ["Q1_2025", "Q1_2026", "Q3_2025", "Q4_2024", "Q4_2025"], "textposition": "top center", "textfont": {"size": 9}, "marker": {"color": "#a2aaad", "size": 10, "opacity": 0.85, "line": {"width": 1, "color": "#fff"}}}, {"type": "scatter", "mode": "markers+text", "name": "MSFT", "x": [0.333, 0.291, 0.512, 0.317, 0.538], "y": [-1.44, -3.15, -1.05, -4.04, -3.12], "text": ["Q1_2025", "Q1_2026", "Q2_2025", "Q2_2026", "Q4_2025"], "textposition": "top center", "textfont": {"size": 9}, "marker": {"color": "#00a4ef", "size": 10, "opacity": 0.85, "line": {"width": 1, "color": "#fff"}}}, {"type": "scatter", "mode": "markers+text", "name": "GOOGL", "x": [0.396, 0.383, 0.362, 0.303], "y": [-0.14, 3.46, -4.31, -7.32], "text": ["Q2_2025", "Q3_2025", "Q4_2024", "Q4_2025"], "textposition": "top center", "textfont": {"size": 9}, "marker": {"color": "#fbbc04", "size": 10, "opacity": 0.85, "line": {"width": 1, "color": "#fff"}}}, {"type": "scatter", "mode": "markers+text", "name": "META", "x": [0.164, 0.348, 0.181, 0.324, 0.286], "y": [-9.67, -1.89, -4.83, 2.39, -4.08], "text": ["Q1_2026", "Q3_2024", "Q3_2025", "Q4_2024", "Q4_2025"], "textposition": "top center", "textfont": {"size": 9}, "marker": {"color": "#0082fb", "size": 10, "opacity": 0.85, "line": {"width": 1, "color": "#fff"}}}, {"type": "scatter", "mode": "markers+text", "name": "AMZN", "x": [0.367, 0.242, 0.388, 0.265, 0.362], "y": [0.63, -0.94, 3.15, -3.12, -4.21], "text": ["Q1_2024", "Q2_2024", "Q3_2025", "Q4_2024", "Q4_2025"], "textposition": "top center", "textfont": {"size": 9}, "marker": {"color": "#ff9900", "size": 10, "opacity": 0.85, "line": {"width": 1, "color": "#fff"}}}, {"type": "scatter", "mode": "markers+text", "name": "TSLA", "x": [0.322, 0.195, 0.365, 0.32, 0.186, 0.265], "y": [12.19, 0.97, -2.36, -4.51, -7.74, 0.5], "text": ["Q1_2024", "Q2_2025", "Q3_2024", "Q3_2025", "Q4_2024", "Q4_2025"], "textposition": "top center", "textfont": {"size": 9}, "marker": {"color": "#cc0000", "size": 10, "opacity": 0.85, "line": {"width": 1, "color": "#fff"}}}], "layout": {"title": {"text": "Earnings Call Sentiment vs 5-Day Excess Return (per event)", "font": {"size": 15}}, "xaxis": {"title": "Avg LLM Sentiment Score", "gridcolor": "#2a2a2a", "zeroline": true, "zerolinecolor": "#555"}, "yaxis": {"title": "5-Day Excess Return (%)", "gridcolor": "#2a2a2a", "zeroline": true, "zerolinecolor": "#555"}, "plot_bgcolor": "#1a1a1a", "paper_bgcolor": "#1a1a1a", "font": {"color": "#e5e7eb"}, "legend": {"bgcolor": "rgba(0,0,0,0)"}, "margin": {"t": 60, "b": 60, "l": 70, "r": 20}}}.data, {"data": [{"type": "scatter", "mode": "markers+text", "name": "NVDA", "x": [0.194, 0.419, 0.368, 0.328, 0.365, 0.364, 0.428], "y": [-2.68, -3.09, -5.12, -5.43, -12.7, -4.46, 4.5], "text": ["Q1_2026", "Q2_2025", "Q2_2026", "Q3_2025", "Q3_2026", "Q4_2025", "Q4_2026"], "textposition": "top center", "textfont": {"size": 9}, "marker": {"color": "#76b900", "size": 10, "opacity": 0.85, "line": {"width": 1, "color": "#fff"}}}, {"type": "scatter", "mode": "markers+text", "name": "AAPL", "x": [0.336, 0.28, 0.202, 0.293, 0.271], "y": [-3.67, 9.15, 9.59, -3.55, 2.37], "text": ["Q1_2025", "Q1_2026", "Q3_2025", "Q4_2024", "Q4_2025"], "textposition": "top center", "textfont": {"size": 9}, "marker": {"color": "#a2aaad", "size": 10, "opacity": 0.85, "line": {"width": 1, "color": "#fff"}}}, {"type": "scatter", "mode": "markers+text", "name": "MSFT", "x": [0.333, 0.291, 0.512, 0.317, 0.538], "y": [-1.44, -3.15, -1.05, -4.04, -3.12], "text": ["Q1_2025", "Q1_2026", "Q2_2025", "Q2_2026", "Q4_2025"], "textposition": "top center", "textfont": {"size": 9}, "marker": {"color": "#00a4ef", "size": 10, "opacity": 0.85, "line": {"width": 1, "color": "#fff"}}}, {"type": "scatter", "mode": "markers+text", "name": "GOOGL", "x": [0.396, 0.383, 0.362, 0.303], "y": [-0.14, 3.46, -4.31, -7.32], "text": ["Q2_2025", "Q3_2025", "Q4_2024", "Q4_2025"], "textposition": "top center", "textfont": {"size": 9}, "marker": {"color": "#fbbc04", "size": 10, "opacity": 0.85, "line": {"width": 1, "color": "#fff"}}}, {"type": "scatter", "mode": "markers+text", "name": "META", "x": [0.164, 0.348, 0.181, 0.324, 0.286], "y": [-9.67, -1.89, -4.83, 2.39, -4.08], "text": ["Q1_2026", "Q3_2024", "Q3_2025", "Q4_2024", "Q4_2025"], "textposition": "top center", "textfont": {"size": 9}, "marker": {"color": "#0082fb", "size": 10, "opacity": 0.85, "line": {"width": 1, "color": "#fff"}}}, {"type": "scatter", "mode": "markers+text", "name": "AMZN", "x": [0.367, 0.242, 0.388, 0.265, 0.362], "y": [0.63, -0.94, 3.15, -3.12, -4.21], "text": ["Q1_2024", "Q2_2024", "Q3_2025", "Q4_2024", "Q4_2025"], "textposition": "top center", "textfont": {"size": 9}, "marker": {"color": "#ff9900", "size": 10, "opacity": 0.85, "line": {"width": 1, "color": "#fff"}}}, {"type": "scatter", "mode": "markers+text", "name": "TSLA", "x": [0.322, 0.195, 0.365, 0.32, 0.186, 0.265], "y": [12.19, 0.97, -2.36, -4.51, -7.74, 0.5], "text": ["Q1_2024", "Q2_2025", "Q3_2024", "Q3_2025", "Q4_2024", "Q4_2025"], "textposition": "top center", "textfont": {"size": 9}, "marker": {"color": "#cc0000", "size": 10, "opacity": 0.85, "line": {"width": 1, "color": "#fff"}}}], "layout": {"title": {"text": "Earnings Call Sentiment vs 5-Day Excess Return (per event)", "font": {"size": 15}}, "xaxis": {"title": "Avg LLM Sentiment Score", "gridcolor": "#2a2a2a", "zeroline": true, "zerolinecolor": "#555"}, "yaxis": {"title": "5-Day Excess Return (%)", "gridcolor": "#2a2a2a", "zeroline": true, "zerolinecolor": "#555"}, "plot_bgcolor": "#1a1a1a", "paper_bgcolor": "#1a1a1a", "font": {"color": "#e5e7eb"}, "legend": {"bgcolor": "rgba(0,0,0,0)"}, "margin": {"t": 60, "b": 60, "l": 70, "r": 20}}}.layout, cfg);
+</script>
+
+</body>
+</html>

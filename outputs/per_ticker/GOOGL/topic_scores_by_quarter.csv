@@ -1,0 +1,46 @@
+period,primary_topic,sentiment_score,risk_intensity_score,uncertainty_score,finbert_positive,finbert_negative
+Q2_2025,AI Agent Ecosystem,0.4,0.2333,0.3333,0.2871,0.0132
+Q2_2025,AI Infrastructure,0.35,0.1,0.25,0.2732,0.0132
+Q2_2025,AI in Advertising,0.2333,0.2333,0.3333,0.2913,0.0264
+Q2_2025,Capital Allocation,0.1,0.4,0.5,0.1139,0.0137
+Q2_2025,Gemini Models,0.6,0.15,0.2,0.1488,0.0204
+Q2_2025,Google Cloud Expansion,0.45,0.075,0.325,0.4197,0.0162
+Q2_2025,Guidance / Outlook,0.7,0.4,0.3,0.922,0.035
+Q2_2025,Margins / Profitability,0.4,0.1,0.2,0.2439,0.0102
+Q2_2025,Other,0.0,0.0,0.0,0.5862,0.0171
+Q2_2025,Search Innovations,0.4333,0.1333,0.2333,0.3064,0.0179
+Q2_2025,Subscription Services,0.4667,0.1333,0.2333,0.6002,0.012
+Q2_2025,YouTube Growth,0.45,0.15,0.2,0.3693,0.0207
+Q3_2025,AI Agent Ecosystem,0.3,0.3,0.35,0.1201,0.015
+Q3_2025,AI Infrastructure,0.55,0.075,0.15,0.433,0.0132
+Q3_2025,AI in Advertising,0.4,0.15,0.25,0.2973,0.0129
+Q3_2025,Gemini Models,0.2,0.2,0.2667,0.4502,0.0124
+Q3_2025,Google Cloud Expansion,0.6,0.1,0.2,0.1352,0.0158
+Q3_2025,Guidance / Outlook,0.7,0.4,0.3,0.8993,0.0619
+Q3_2025,Margins / Profitability,0.3,0.2,0.2,0.3444,0.0212
+Q3_2025,Other,0.0,0.0,0.0,0.1578,0.0286
+Q3_2025,Search Innovations,0.45,0.1167,0.2,0.3758,0.0136
+Q3_2025,Waymo Developments,0.7,0.2,0.2,0.568,0.0115
+Q3_2025,YouTube Growth,0.75,0.05,0.1,0.5097,0.0134
+Q4_2024,AI Agent Ecosystem,0.0,0.4,0.5,0.218,0.0114
+Q4_2024,AI Infrastructure,0.375,0.2,0.3,0.3691,0.0152
+Q4_2024,AI in Advertising,-0.1,0.4,0.5,0.1693,0.019
+Q4_2024,Capital Allocation,0.0,0.3,0.3,0.1652,0.0122
+Q4_2024,Gemini Models,0.525,0.075,0.175,0.323,0.0155
+Q4_2024,Google Cloud Expansion,0.3,0.0,0.4,0.9437,0.0131
+Q4_2024,Guidance / Outlook,0.7,0.4,0.3,0.7488,0.1595
+Q4_2024,Macro / Demand,0.4,0.0,0.3,0.4346,0.0165
+Q4_2024,Margins / Profitability,0.6,0.1,0.2,0.1445,0.0153
+Q4_2024,Other,0.0,0.25,0.25,0.3002,0.0204
+Q4_2024,Search Innovations,0.4333,0.0833,0.1833,0.4514,0.0121
+Q4_2024,YouTube Growth,0.7,0.0,0.1,0.7434,0.0113
+Q4_2025,AI Agent Ecosystem,0.4333,0.0667,0.2333,0.1837,0.0122
+Q4_2025,AI Infrastructure,0.3,0.28,0.34,0.3515,0.0149
+Q4_2025,AI in Advertising,0.6,0.1,0.2,0.1903,0.0103
+Q4_2025,Capital Allocation,0.3,0.15,0.2,0.1536,0.0201
+Q4_2025,Gemini Models,0.36,0.14,0.3,0.4895,0.0114
+Q4_2025,Guidance / Outlook,0.2667,0.2667,0.3667,0.3717,0.0197
+Q4_2025,Macro / Demand,0.3,0.0,0.4,0.2399,0.0278
+Q4_2025,Other,0.0,0.0,0.0,0.1766,0.0251
+Q4_2025,Search Innovations,0.5333,0.1,0.2333,0.3881,0.0139
+Q4_2025,YouTube Growth,0.15,0.3,0.35,0.2694,0.0706

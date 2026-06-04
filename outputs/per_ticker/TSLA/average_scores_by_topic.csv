@@ -1,0 +1,19 @@
+primary_topic,sentiment_score,risk_intensity_score,uncertainty_score,confidence_score,guidance_strength_score,finbert_positive,finbert_negative
+4680 Battery Cell Production,0.0545,0.2636,0.4364,0.7909,0.3727,0.2546,0.1114
+AI and Compute Infrastructure,0.2714,0.1357,0.3143,0.7881,0.1738,0.1038,0.0333
+Autonomy and Full Self-Driving (FSD),0.3812,0.18,0.2941,0.8035,0.3235,0.1342,0.0527
+Capital Allocation,0.2,0.075,0.3125,0.7875,0.2625,0.1242,0.0773
+Cost Management and Efficiency Initiatives,0.3429,0.1095,0.2476,0.819,0.181,0.1551,0.1233
+Energy Storage Solutions,0.5091,0.1,0.2455,0.8364,0.5,0.2931,0.0181
+Global Expansion and Market Penetration,0.6,0.1333,0.2333,0.8,0.6333,0.2171,0.0163
+Guidance / Outlook,0.125,0.25,0.425,0.8,0.375,0.0852,0.0211
+Macro / Demand,0.45,0.1,0.35,0.8,0.5,0.1198,0.3142
+Manufacturing,0.6,0.2,0.2,0.8,0.5,0.1335,0.0248
+Margins / Profitability,0.0,0.0,0.5,0.8,0.0,0.04,0.027
+Market Demand and Sales Strategies,0.3941,0.1765,0.3059,0.8059,0.2824,0.2616,0.1224
+Model Lineup and Production Updates,0.2415,0.161,0.3098,0.7805,0.3122,0.206,0.0499
+Optimus Robot Development,0.2917,0.2083,0.375,0.7833,0.2708,0.1181,0.0395
+Other,0.0787,0.0,0.0766,0.5617,0.0,0.0638,0.0464
+Regulation / Geopolitics,-0.2667,0.3667,0.6,0.8333,0.2,0.1069,0.0777
+Regulatory Challenges,-0.0158,0.3737,0.4474,0.7842,0.2053,0.1012,0.0763
+Robotaxi Service,0.4465,0.1442,0.293,0.8233,0.3767,0.145,0.0321

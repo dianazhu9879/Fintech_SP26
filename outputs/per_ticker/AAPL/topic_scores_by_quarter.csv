@@ -1,0 +1,62 @@
+period,primary_topic,sentiment_score,risk_intensity_score,uncertainty_score,finbert_positive,finbert_negative
+Q1_2025,AI and Machine Learning in Products,0.6,0.0,0.1,0.2767,0.0118
+Q1_2025,Apple Intelligence,0.45,0.0333,0.2667,0.2867,0.0194
+Q1_2025,Emerging Market Performance,0.425,0.175,0.25,0.4734,0.2185
+Q1_2025,Guidance / Outlook,0.4,0.4,0.4,0.3553,0.1192
+Q1_2025,Mac Performance,0.575,0.05,0.25,0.3318,0.017
+Q1_2025,Macro / Demand,0.2,0.25,0.4,0.0853,0.0217
+Q1_2025,Margins / Profitability,0.2714,0.1714,0.3571,0.3446,0.0378
+Q1_2025,Other,0.0,0.0,0.0,0.035,0.0186
+Q1_2025,Regulation / Geopolitics,-0.3,0.5,0.6,0.1359,0.0183
+Q1_2025,Services Growth,0.475,0.15,0.25,0.616,0.0145
+Q1_2025,Supply Chain and Manufacturing,0.0,0.15,0.35,0.1168,0.0148
+Q1_2025,iPad Innovations,0.4,0.0,0.2,0.4294,0.0178
+Q1_2025,iPhone Lineup,0.2556,0.1444,0.3222,0.2268,0.1032
+Q1_2026,AI and Machine Learning in Products,0.3,0.1,0.25,0.3245,0.012
+Q1_2026,Apple Intelligence,0.1778,0.1444,0.3778,0.2728,0.0139
+Q1_2026,Capital Allocation,0.0,0.4,0.5,0.0424,0.0522
+Q1_2026,Emerging Market Performance,0.6,0.0,0.15,0.4093,0.0173
+Q1_2026,Guidance / Outlook,0.15,0.45,0.55,0.0853,0.0217
+Q1_2026,Mac Performance,0.35,0.1,0.2,0.3556,0.0187
+Q1_2026,Macro / Demand,0.25,0.4,0.4,0.3831,0.1397
+Q1_2026,Margins / Profitability,0.44,0.14,0.28,0.4464,0.0266
+Q1_2026,Other,0.0,0.0,0.0,0.0346,0.0191
+Q1_2026,Services Growth,0.475,0.0,0.25,0.3473,0.0301
+Q1_2026,Supply Chain and Manufacturing,-0.3,0.32,0.62,0.0822,0.0649
+Q1_2026,iPhone Lineup,0.4167,0.0667,0.2333,0.4319,0.0244
+Q3_2025,AI and Machine Learning in Products,0.24,0.16,0.36,0.1116,0.024
+Q3_2025,Apple Intelligence,0.4,0.04,0.32,0.2148,0.0139
+Q3_2025,Capital Allocation,0.3,0.0,0.25,0.0604,0.017
+Q3_2025,Emerging Market Performance,0.8,0.2,0.2,0.7347,0.0362
+Q3_2025,Guidance / Outlook,0.1333,0.2333,0.4,0.2985,0.0627
+Q3_2025,Macro / Demand,0.125,0.375,0.475,0.3141,0.065
+Q3_2025,Other,0.0,0.0,0.0,0.0316,0.0203
+Q3_2025,Regulation / Geopolitics,-0.15,0.45,0.55,0.0623,0.0514
+Q3_2025,Services Growth,0.2,0.275,0.45,0.3869,0.2387
+Q3_2025,Supply Chain and Manufacturing,0.25,0.15,0.3,0.2613,0.0228
+Q3_2025,iPad Innovations,-0.3,0.4,0.5,0.071,0.1305
+Q3_2025,iPhone Lineup,0.2667,0.0556,0.2889,0.2133,0.0897
+Q4_2024,AI and Machine Learning in Products,0.6,0.1,0.2,0.3762,0.0158
+Q4_2024,Apple Intelligence,0.4133,0.0467,0.26,0.2103,0.0216
+Q4_2024,Capital Allocation,0.15,0.15,0.25,0.4971,0.0141
+Q4_2024,Emerging Market Performance,0.7,0.05,0.15,0.8129,0.0337
+Q4_2024,Guidance / Outlook,0.3,0.2,0.35,0.2372,0.0297
+Q4_2024,Macro / Demand,-0.3,0.5,0.6,0.0195,0.8849
+Q4_2024,Margins / Profitability,0.3333,0.1667,0.3,0.5854,0.0649
+Q4_2024,Other,0.0,0.0,0.25,0.0422,0.0335
+Q4_2024,Regulation / Geopolitics,0.0,0.5333,0.5667,0.1064,0.0312
+Q4_2024,Services Growth,0.425,0.125,0.275,0.2812,0.0159
+Q4_2024,iPhone Lineup,0.0333,0.2167,0.3667,0.2352,0.0405
+Q4_2025,AI and Machine Learning in Products,0.4,0.1333,0.3,0.5214,0.0366
+Q4_2025,Apple Intelligence,0.44,0.1,0.28,0.3508,0.0132
+Q4_2025,Capital Allocation,0.0,0.2,0.35,0.0691,0.0567
+Q4_2025,Emerging Market Performance,0.0,0.0,0.5,0.076,0.0177
+Q4_2025,Guidance / Outlook,0.7,0.15,0.125,0.6116,0.0297
+Q4_2025,Mac Performance,0.15,0.0,0.2,0.2116,0.0778
+Q4_2025,Macro / Demand,0.4,0.1,0.2,0.3063,0.013
+Q4_2025,Margins / Profitability,0.1,0.2333,0.3667,0.376,0.041
+Q4_2025,Other,0.0,0.0,0.25,0.0426,0.0464
+Q4_2025,Regulation / Geopolitics,0.2,0.25,0.35,0.0685,0.0767
+Q4_2025,Services Growth,0.4571,0.0714,0.2429,0.3011,0.0339
+Q4_2025,Supply Chain and Manufacturing,-0.3,0.275,0.65,0.146,0.064
+Q4_2025,iPhone Lineup,0.2812,0.1562,0.375,0.2085,0.1386
