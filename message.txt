@@ -1,0 +1,138 @@
+Here’s a strong 80-company universe for your earnings call signals project. I’d structure it so you can compare “AI / tech signal intensity” across mega-cap tech, smaller tech, and non-tech sectors where earnings calls reveal demand, margin pressure, capex, inventory, pricing power, regulation, and consumer weakness.
+
+I’d keep the universe broad but not random. You want enough companies where calls actually matter and where management language changes are useful.
+
+### 1. Mega-cap / Big Tech / AI Platforms
+
+These are your “market narrative leaders.” Their calls set the tone for AI, cloud, ads, devices, enterprise software, and capex.
+
+1. Microsoft
+2. Apple
+3. Nvidia
+4. Alphabet
+5. Amazon
+6. Meta
+7. Tesla
+8. Broadcom
+9. Oracle
+10. Adobe
+
+### 2. Large Enterprise Software / Cloud / Data
+
+Good for tracking enterprise budget cycles, AI monetization, SaaS churn, seat expansion, cloud migration, and margin discipline.
+
+11. Salesforce
+12. ServiceNow
+13. Snowflake
+14. Datadog
+15. MongoDB
+16. Cloudflare
+17. Palantir
+18. Workday
+19. Atlassian
+20. HubSpot
+
+### 3. Small / Mid-cap Tech and High-Growth Software
+
+This is where you’ll get more volatility and more honest signals on customer demand, SMB weakness, sales cycles, and AI disruption.
+
+21. Monday.com
+22. GitLab
+23. Unity Software
+24. AppLovin
+25. DigitalOcean
+26. Fastly
+27. Elastic
+28. Asana
+29. Box
+30. C3.ai
+
+### 4. Semiconductors / Hardware / Infrastructure
+
+Useful for AI capex, data center buildout, PC/server cycles, automotive chips, industrial demand, memory pricing, and supply chain normalization.
+
+31. AMD
+32. Intel
+33. Qualcomm
+34. Micron
+35. Marvell
+36. Applied Materials
+37. Lam Research
+38. KLA
+39. Texas Instruments
+40. Super Micro Computer
+
+### 5. Cybersecurity
+
+Very good sector for earnings-call NLP because companies talk clearly about enterprise urgency, deal scrutiny, platform consolidation, and federal/regulated demand.
+
+41. Palo Alto Networks
+42. CrowdStrike
+43. Zscaler
+44. Fortinet
+45. Okta
+46. SentinelOne
+
+### 6. Consumer Staples
+
+This sector is great for pricing power, volume elasticity, private-label pressure, input costs, and consumer health.
+
+47. Procter & Gamble
+48. Coca-Cola
+49. PepsiCo
+50. Costco
+51. Walmart
+52. Colgate-Palmolive
+53. Mondelez
+54. General Mills
+55. Kraft Heinz
+56. Hershey
+
+### 7. Consumer Discretionary / Retail / Restaurants
+
+Useful for detecting consumer weakness, trade-down behavior, inventory issues, traffic trends, and margin pressure.
+
+57. Nike
+58. Starbucks
+59. McDonald’s
+60. Chipotle
+61. Target
+62. Home Depot
+63. Lowe’s
+64. Airbnb
+65. Booking Holdings
+66. Deckers Outdoor
+
+### 8. Biotech / Pharma / Healthcare
+
+This sector has different language patterns: trial milestones, FDA risk, pipeline updates, payer pressure, procedure volumes, utilization, and GLP-1 effects.
+
+67. Eli Lilly
+68. Pfizer
+69. Merck
+70. Amgen
+71. Gilead Sciences
+72. Vertex Pharmaceuticals
+73. Regeneron
+74. Moderna
+75. UnitedHealth Group
+76. Intuitive Surgical
+
+### 9. Financials / Fintech / Payments
+
+Good for consumer credit, spending volume, delinquencies, rates, capital markets activity, and digital payments.
+
+77. JPMorgan Chase
+78. Visa
+79. Mastercard
+80. Block
+
+For a cleaner project design, I’d tag each company across two dimensions:
+
+First, sector: Big Tech, SaaS, Semis, Cybersecurity, Consumer Staples, Consumer Discretionary, Healthcare, Financials.
+
+Second, signal type: AI capex, cloud demand, enterprise spend, consumer weakness, pricing power, inventory, margin pressure, regulation, credit stress, pipeline/FDA, international demand.
+
+The strongest “core 40” for your project would be Microsoft, Nvidia, Amazon, Alphabet, Meta, AMD, Broadcom, Oracle, Salesforce, ServiceNow, Snowflake, Datadog, Palantir, Cloudflare, CrowdStrike, Palo Alto, Zscaler, Walmart, Costco, P&G, Coca-Cola, Pepsi, Mondelez, Target, Home Depot, Nike, Starbucks, McDonald’s, Eli Lilly, Merck, Pfizer, UnitedHealth, Intuitive Surgical, JPMorgan, Visa, Mastercard, Block, Airbnb, Booking, and Super Micro.
+
+That core set gives you enough cross-sector signal without drowning in noise.
