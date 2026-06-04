@@ -198,6 +198,10 @@ Based on EDA results, prioritized candidate features for a controlled modeling s
 
 ---
 
+## Dashboard
+
+To view the static dashboard, open [`index.html`](index.html) in your browser.
+
 ## Reports
 
 Full results with tables: [`reports/final_results_summary.md`](reports/final_results_summary.md)
