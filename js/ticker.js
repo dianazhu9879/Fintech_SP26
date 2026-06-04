@@ -14,6 +14,16 @@
     if (value === null || value === undefined || Math.abs(Number(value)) < 0.1) return 'corr-flat';
     return Number(value) > 0 ? 'corr-pos' : 'corr-neg';
   };
+  const corrStyle = (value) => {
+    if (value === null || value === undefined) return '';
+    const numeric = Math.max(-1, Math.min(1, Number(value) || 0));
+    const intensity = Math.min(1, Math.abs(numeric));
+    if (intensity < 0.08) return 'color:rgba(190,188,180,0.72)';
+    const alpha = (0.5 + intensity * 0.5).toFixed(2);
+    return numeric > 0
+      ? `color:rgba(91, ${Math.round(170 + intensity * 55)}, 120, ${alpha})`
+      : `color:rgba(${Math.round(190 + intensity * 55)}, 92, 92, ${alpha})`;
+  };
   const pillClass = (bias) => bias.includes('BEAR') ? 'pill-bear' : bias.includes('BULL') ? 'pill-bull' : 'pill-neutral';
   const displayTilt = (bias) => bias.includes('BEAR') ? 'Cautious tilt' : bias.includes('BULL') ? 'Constructive tilt' : 'Balanced';
   const confClass = (bias) => bias.includes('BEAR') ? 'bear' : bias.includes('BULL') ? 'bull' : 'neut';
@@ -161,6 +171,36 @@
             <div class="mini-stat-bar"><span class="${cls}" style="width:${Math.max(0, Math.min(100, Number(value) || 0))}%"></span></div>
             <div class="ms-sub">0-100</div>
           </div>
+        `).join('')}
+      </div>
+    `;
+  }
+
+  function toneComparison(call) {
+    const config = [
+      ['Positive', 'positiveLang', 'fill-pos'],
+      ['Negative', 'negativeLang', 'fill-neg'],
+      ['Risk', 'riskLanguage', 'fill-warn'],
+      ['Uncertainty', 'uncertainty', 'fill-warn'],
+      ['Pressure', 'analystPressure', 'fill-info'],
+      ['Defensive', 'defensiveLang', 'fill-accent'],
+      ['Guidance', 'guidanceStrength', 'fill-pos'],
+    ];
+    const cell = (metrics, key, cls) => `
+      <div class="tone-compare-cell">
+        <div class="tone-compare-track"><span class="${cls}" style="width:${metrics[key]}%"></span></div>
+        <span class="mono">${metrics[key]}</span>
+      </div>
+    `;
+    return `
+      <div class="tone-compare">
+        <div class="tone-compare-head"></div>
+        <div class="tone-compare-head">Remarks</div>
+        <div class="tone-compare-head">Q&amp;A</div>
+        ${config.map(([label, key, cls]) => `
+          <div class="tone-compare-label">${label}</div>
+          ${cell(call.prepared, key, cls)}
+          ${cell(call.qa, key, cls)}
         `).join('')}
       </div>
     `;
@@ -384,12 +424,13 @@
                 <td>
                   <button class="topic-name-cell topic-open-button" type="button" data-topic-open="${topic.label}">
                     <span>${topic.label}</span>
+                    ${(n || 0) >= 6 ? '<span class="topic-n-label">N>=6</span>' : ''}
                   </button>
                 </td>
                 <td class="mono">${n ?? 'n/a'}</td>
                 <td class="mono">${topic.mentions ?? 'mapped'}</td>
-                <td class="${corrClass(pSentiment)} mono">${pSentiment === null || pSentiment === undefined ? 'n/a' : Number(pSentiment).toFixed(h.sentimentCorrelation === undefined ? 2 : 3)}</td>
-                <td class="${corrClass(pRisk)} mono">${pRisk === null || pRisk === undefined ? 'n/a' : Number(pRisk).toFixed(h.riskCorrelation === undefined ? 2 : 3)}</td>
+                <td class="${corrClass(pSentiment)} mono corr-value" style="${corrStyle(pSentiment)}">${pSentiment === null || pSentiment === undefined ? 'n/a' : Number(pSentiment).toFixed(h.sentimentCorrelation === undefined ? 2 : 3)}</td>
+                <td class="${corrClass(pRisk)} mono corr-value" style="${corrStyle(pRisk)}">${pRisk === null || pRisk === undefined ? 'n/a' : Number(pRisk).toFixed(h.riskCorrelation === undefined ? 2 : 3)}</td>
                 <td class="quality-text ${quality}">${quality}</td>
               </tr>
             `}).join('')}
@@ -603,18 +644,15 @@
         </section>
 
         ${call ? `
-          <section class="panel span-8 tone-emphasis-panel">
+          <section class="panel span-7 tone-emphasis-panel">
             <div class="panel-header">
               <div>${panelTitle('Prepared vs Q&amp;A', 'text')}<div class="panel-sub">Sentiment, risk, pressure, defensiveness</div></div>
               ${sourceBadge('FinBERT + LLM', 'text')}
             </div>
-            <div class="tone-split">
-              <div><div class="subhead">Prepared remarks</div>${meterRows(call.prepared)}</div>
-              <div><div class="subhead">Analyst Q&amp;A</div>${meterRows(call.qa)}</div>
-            </div>
+            ${toneComparison(call)}
           </section>
 
-          <section class="panel span-4 audio-panel">
+          <section class="panel span-5 audio-panel">
             <div class="panel-header">
               <div>${panelTitle('Audio Features', 'audio')}<div class="panel-sub">Q&amp;A delivery steadiness and stress markers</div></div>
               ${sourceBadge(call.audio?.available ? 'audio' : 'placeholder', 'audio')}
